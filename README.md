@@ -2,6 +2,9 @@
     <a href="https://pt-br.reactjs.org/">🔥 Hoppe fiveM Server 🔥</a>
 </h1>
 
+<p>Um servidor desenvolvido por mim usando a [CK-Framework](https://github.com/ycr4zy/FreeGamemode)</p>
+<p>A server developed by me using [CK-Framework](https://github.com/ycr4zy/FreeGamemode)</p>
+
 👤 Discord: !Hoppe#0666
 <br>
 🐦 Twitter: [Twitter](https://twitter.com/GabrielhoppeM)
