@@ -19,6 +19,7 @@ A server developed by me using [CK-Framework](https://github.com/ycr4zy/FreeGame
 👉 This is a demo version if you want the full version enter my [Discord](https://discord.gg/ryUSZRy) and talk me;
 <br>
 📦Arquivo do banco de dados dentro da pasta resources;
+<br>
 📦Sql archive inside resources folder;
 
 <img src="https://cdn.discordapp.com/attachments/732940520015527937/747556553048981554/fps.PNG" width="800rem" height="auto" />
