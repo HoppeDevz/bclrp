@@ -3,4 +3,5 @@
 </h1>
 
 👤 Discord: !Hoppe#0666
+<br>
 🐦 Twitter: [Twitter](https://twitter.com/GabrielhoppeM)
