@@ -5,7 +5,6 @@ citizen/*
 /*.dll
 *.exe
 *.json
-*.cfg
 *.crt
 *.key
 icudtl.dat
