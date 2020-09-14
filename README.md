@@ -2,4 +2,4 @@
     <a href="https://pt-br.reactjs.org/">🔗 Hoppe fiveM Server</a>
 </h1>
 
-![Badge](https://twitter.com/GabrielhoppeM?style=for-the-badge&logo=ghost)
+![https://twitter.com/GabrielhoppeM](https://img.shields.io/badge/Blog-Rocketseat-%237159c1?style=for-the-badge&logo=ghost)
