@@ -6,7 +6,7 @@ Um servidor desenvolvido por mim usando a [CK-Framework](https://github.com/ycr4
 <br>
 A server developed by me using [CK-Framework](https://github.com/ycr4zy/FreeGamemode)
 
-👤 Discord: !Hoppe#0666
+👤 Discord: !Hoppe#0666 or https://discord.gg/xyNCCJn
 <br>
 🐦 Twitter: [Twitter](https://twitter.com/GabrielhoppeM)
 
