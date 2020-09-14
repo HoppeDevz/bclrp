@@ -1,0 +1,43 @@
+.craft-ammo-app {
+    position: absolute;
+    right: 3%;
+    top: 10%;
+}
+
+.craft-weapon-component button {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #111111;
+
+    color: white;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: space-between;
+    min-width: 20rem;
+    max-width: 20rem;
+
+    outline: none;
+}
+
+button {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #111111;
+
+    color: white;
+    font-weight: bold;
+
+    min-width: 20rem;
+    max-width: 20rem;
+
+    outline: none;
+
+    margin-top: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: black;
+    transition: background-color 0.2s;
+}

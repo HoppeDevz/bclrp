@@ -1,0 +1,36 @@
+.contraband-app {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+
+.contraband-container {
+    min-width: 20rem;
+    max-width: 20rem;
+    display: grid;
+}
+
+button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    border: none;
+    background-color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+
+    outline: none;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: black;
+    transition: background-color 0.2s;
+}

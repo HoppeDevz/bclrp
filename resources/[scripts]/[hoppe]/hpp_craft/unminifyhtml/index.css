@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.craft-weapon-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10rem;
+    margin-left: 10rem;
+}
+
+.menu-item {
+    display: grid;
+    text-align: center;
+}
+
+.craft-weapon-menu {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 0.7rem;
+}
+
+h1, .price {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+button {
+    display: flex;
+    align-items: center;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+    background-color: #0074D9;
+
+    outline: none;
+
+    min-height: 3rem;
+    min-width: 13rem;
+
+    padding: 0.2rem;
+    border-radius: 2px;
+    transition: background-color 0.5s;
+}
+
+button img {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+button:hover {
+    background-color: #001f3f;
+    transition: background-color 0.5s;
+}
+
+.craft-button {
+    margin-bottom: 0.5rem;
+}
+
+.craft-weapon-close-button {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2rem;
+}

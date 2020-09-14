@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+button, input {
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px solid black;
+    background-color: #fafafa;
+    border-radius: 3px;
+    outline: none;
+
+    min-height: 2rem;
+    max-height: 2rem;
+
+    min-width: 10rem;
+    max-width: 10rem;
+}
+
+.hoppe-loot-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 40rem;
+}
+
+.container {
+    display: grid;
+}
+
+.loot-inv {
+    display: flex;
+    justify-content: center;
+
+    max-width: 25rem;
+    min-width: 25rem;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+
+    max-height: 30rem;
+    min-height: 30rem;
+    overflow: auto;
+
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: #0074D9;
+    border-radius: 4px;
+
+    margin-top: 0.2rem;
+
+    min-height: 2rem;
+    max-height: 2rem;
+
+    outline: none;
+    transition: background-color 0.5s;
+
+    min-width: 10rem;
+    max-width: 10rem;
+}
+
+button:hover {
+    background-color: #001f3f;
+    transition: background-color 0.5s;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0074D9;
+    border-radius: 10px;
+}
+
+.loot-inv-item {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.4rem;
+    border-radius: 4px;
+    display: grid;
+    min-height: 10rem;
+    margin: 1rem;
+
+    min-height: 10rem;
+    max-height: 10rem;
+
+    max-width: 10rem;
+    min-width: 10rem;
+}
+
+.loot-inv-item-qtd {
+    pointer-events: none;
+}
+
+#qtd-item {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.img-qtd {
+    display: flex;
+    justify-content: space-between;
+}

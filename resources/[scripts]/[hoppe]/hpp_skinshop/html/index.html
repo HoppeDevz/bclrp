@@ -1,0 +1,451 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>	
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body id="body">
+    <div class="container-skinshop">
+        <div class="skinshop-container">
+            <h1 class="title-page">Loja de Roupas</h1>
+
+            <div class="options-select-01">
+                <h2>Máscara</h2>
+                <button id="back-next-button" class='back1'> - </button>
+                <input value="0" class="placeholder1"></input>
+                <button id="back-next-button" class='next1'> + </button>
+            </div>
+
+            <div class="options-select-02">
+                <h2>Cabelo</h2>
+                <button id="back-next-button" class='back2'> - </button>
+                <input value="0" class="placeholder2"></input>
+                <button id="back-next-button" class='next2'> + </button>
+            </div>
+
+            <div class="options-select-03">
+                <h2>Mãos</h2>
+                <button id="back-next-button" class='back3'> - </button>
+                <input value="0" class="placeholder3"></input>
+                <button id="back-next-button" class='next3'> + </button>
+            </div>
+
+            <div class="options-select-04">
+                <h2>Calça</h2>
+                <button id="back-next-button" class='back4'> - </button>
+                <input value="0" class="placeholder4"></input>
+                <button id="back-next-button" class='next4'> + </button>
+            </div>
+
+            <div class="options-select-05">
+                <h2>Mochila</h2>
+                <button id="back-next-button" class='back5'> - </button>
+                <input value="0" class="placeholder5"></input>
+                <button id="back-next-button" class='next5'> + </button>
+            </div>
+
+            <div class="options-select-06">
+                <h2>Sapatos</h2>
+                <button id="back-next-button" class='back6'> - </button>
+                <input value="0" class="placeholder6"></input>
+                <button id="back-next-button" class='next6'> + </button>
+            </div>
+
+            <div class="options-select-07">
+                <h2>Acessórios</h2>
+                <button id="back-next-button" class='back7'> - </button>
+                <input value="0" class="placeholder7"></input>
+                <button id="back-next-button" class='next7'> + </button>
+            </div>
+
+            <div class="options-select-08">
+                <h2>Camisas</h2>
+                <button id="back-next-button" class='back8'> - </button>
+                <input value="0" class="placeholder8"></input>
+                <button id="back-next-button" class='next8'> + </button>
+            </div>
+
+            <div class="options-select-11">
+                <h2>Jaquetas</h2>
+                <button id="back-next-button" class='back11'> - </button>
+                <input value="0" class="placeholder11"></input>
+                <button id="back-next-button" class='next11'> + </button>
+            </div>
+
+            <button class="closeButton">Fechar</button>
+        </div>
+    </div>
+
+    <style>
+
+        .container-skinshop {
+            position: absolute;
+            right: 40px;
+            top: 40px;
+        }
+
+
+        #back-next-button {
+            background-color: #0074D9;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+
+            outline: none;
+        }
+
+        .title-page {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        .closeButton {
+            background-color: #0074D9;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: bold;
+
+            outline: none;
+            margin-top: 5px;
+        }
+
+        h2 {
+            font-size: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            max-width: 200px;
+            outline: none;
+            cursor: none;
+            pointer-events: none;
+
+            text-align: center;
+            padding: 5px;
+
+            width: 200px;
+            font-size: 10px;
+
+            border-radius: 8px;
+
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .skinshop-container {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+
+    <script>
+        const container = $(".container-skinshop");
+        const closeButton = $(".closeButton");
+
+        container.hide();
+
+        window.addEventListener('message', event => {
+
+            if (event.data.open) {
+                container.show();
+            } else {
+                container.hide();
+            }
+
+            const data = []
+            data.push( JSON.parse(event.data.clothes) )
+            
+            for ( let clothes in data[0].drawables) {
+                console.log(clothes + "=>" + data[0].drawables[clothes])
+
+                if ( $(".placeholder" + String(clothes)) ) {
+                    $(".placeholder" + String(clothes)).attr("value", Number(data[0].drawables[clothes][0]))
+
+                    $(".next" + String(clothes)).click(() => { 
+                        let value = $(".placeholder" + String(clothes)).val();
+                        let new_value = Number(value) + 1;
+
+                        // 1885233650 => mp_m_freemode_01;
+                        // -1667301416 => mp_f_freemode_01;
+
+                        if (event.data.model_hash == "1885233650" || event.data.model_hash == 1885233650) {
+
+                            switch (parseInt(clothes)) {
+                                case 1: {
+                                    if ( new_value > 179 ) {
+                                        new_value = 0
+                                    }  
+                                }
+
+                                case 2: {
+                                    if (new_value > 74 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 3: {
+                                    if (new_value > 168 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 4: {
+                                    if (new_value > 126 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 5: {
+                                    if (new_value > 84 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 6: {
+                                    if (new_value > 95 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 7: {
+                                    if (new_value > 135 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 8: {
+                                    if (new_value > 164 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 11: {
+                                    if (new_value > 331 ) {
+                                        new_value = 0
+                                    }
+                                }
+                            }
+
+                        } else {
+                            
+                            switch (parseInt(clothes)) {
+                                case 1: {
+                                    if ( new_value > 179 ) {
+                                        new_value = 0
+                                    }  
+                                }
+
+                                case 2: {
+                                    if (new_value > 78 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 3: {
+                                    if (new_value > 209 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 4: {
+                                    if (new_value > 131 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 5: {
+                                    if (new_value > 84 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 6: {
+                                    if (new_value > 99 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 6: {
+                                    if (new_value > 104 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 8: {
+                                    if (new_value > 200 ) {
+                                        new_value = 0
+                                    }
+                                }
+
+                                case 11: {
+                                    if (new_value > 346 ) {
+                                        new_value = 0
+                                    }
+                                }
+                            }
+
+                        }
+                        
+                        
+
+                        $(".placeholder" + String(clothes)).attr("value", new_value);
+
+                        const data = { new_value, clothes }
+
+                        $.post("http://hpp_skinshop/changeClothe", JSON.stringify(data));
+                    })
+
+                    $(".back" + String(clothes)).click(() => {
+                        let value = $(".placeholder" + String(clothes)).val();
+                        let new_value = Number(value) - 1;
+
+                        console.log(event.data.model_hash)
+
+                        if (event.data.model_hash == "1885233650" || event.data.model_hash == 1885233650) {
+                            switch( parseInt(clothes) ) {
+                                case 1: {
+                                    if (new_value < 0 ) {
+                                        new_value = 179
+                                    }
+                                }
+
+                                case 2: {
+                                    if (new_value < 0 ) {
+                                        new_value = 74
+                                    } 
+                                }
+
+                                case 3: {
+                                    if (new_value < 0 ) {
+                                        new_value = 168
+                                    } 
+                                }
+
+                                case 4: {
+                                    if (new_value < 0 ) {
+                                        new_value = 126
+                                    } 
+                                }
+
+                                case 5: {
+                                    if (new_value < 0 ) {
+                                        new_value = 84
+                                    } 
+                                }
+
+                                case 6: {
+                                    if (new_value < 0 ) {
+                                        new_value = 95
+                                    } 
+                                }
+
+                                case 7: {
+                                    if (new_value < 0 ) {
+                                        new_value = 135
+                                    } 
+                                }
+
+                                case 8: {
+                                    if (new_value < 0 ) {
+                                        new_value = 164
+                                    } 
+                                }
+
+                                case 11: {
+                                    if (new_value < 0 ) {
+                                        new_value = 331
+                                    } 
+                                }
+                            }
+                            
+                        } else {
+                            switch( parseInt(clothes) ) {
+                                case 1: {
+                                    if (new_value < 0 ) {
+                                        new_value = 179
+                                    }
+                                }
+
+                                case 2: {
+                                    if (new_value < 0 ) {
+                                        new_value = 78
+                                    } 
+                                }
+
+                                case 3: {
+                                    if (new_value < 0 ) {
+                                        new_value = 209
+                                    } 
+                                }
+
+                                case 4: {
+                                    if (new_value < 0 ) {
+                                        new_value = 131
+                                    } 
+                                }
+
+                                case 5: {
+                                    if (new_value < 0 ) {
+                                        new_value = 84
+                                    } 
+                                }
+
+                                case 6: {
+                                    if (new_value < 0 ) {
+                                        new_value = 99
+                                    } 
+                                }
+
+                                case 7: {
+                                    if (new_value < 0 ) {
+                                        new_value = 104
+                                    } 
+                                }
+
+                                case 8: {
+                                    if (new_value < 0 ) {
+                                        new_value = 200
+                                    } 
+                                }
+
+                                case 11: {
+                                    if (new_value < 0 ) {
+                                        new_value = 346
+                                    } 
+                                }
+                            }
+                        }
+
+                        $(".placeholder" + String(clothes)).attr("value", new_value);
+
+                        const data = { new_value, clothes }
+
+                        $.post("http://hpp_skinshop/changeClothe", JSON.stringify(data));
+                    })
+                }
+            }
+        })
+
+        closeButton.click(() => {
+            $.post("http://hpp_skinshop/closeMenu")
+        })
+
+    </script>
+
+</body>  
+
+</html>  

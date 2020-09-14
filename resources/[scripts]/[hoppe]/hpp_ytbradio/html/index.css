@@ -1,0 +1,9 @@
+.ytb-player {
+    position: absolute;
+    width: 16rem;
+    height: 9rem;
+
+    top: 14rem;
+
+    opacity: 0;
+}

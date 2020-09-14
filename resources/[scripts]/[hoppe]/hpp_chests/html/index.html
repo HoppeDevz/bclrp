@@ -1,0 +1,472 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body id="body">
+    <div class="chest-container"> 
+         
+        <div class="inventory">
+            <button class="chest-close-button">
+                <i 
+                    style="vertical-align: bottom; font-size: 12px;"
+                    class="material-icons"
+                >close
+                </i>
+                Fechar
+            </button> 
+            <div class="inv-container">
+                
+
+            </div>
+        </div>
+
+        <div class="chest">
+            <button class="chest-header">
+                <i 
+                    style="vertical-align: bottom; font-size: 12px;"
+                    class="material-icons"
+                >verified
+                </i>
+                BAÚ
+                <span class="weight"></span>Kg / <span class="capacity"></span>Kg</button>
+            <div class="chest-items-container">
+                
+            </div>
+        <div>
+    </div>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .chest-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 3rem;
+        }
+
+        #input-qtd {
+            outline: none;
+            border: none;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.2);
+            color: #fafafa;
+
+            padding: 1%;
+
+            max-width: 80%;
+
+            margin-bottom: 1%;
+
+            border-radius: 5px;
+        }
+
+        #input {
+            pointer-events: none;
+            outline: none;
+            border: none;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.2);
+            padding: 1%;
+
+            max-width: 80%;
+
+            margin-bottom: 1%;
+
+            border-radius: 5px;
+        }
+
+        .inv-item-info {
+            display: grid;
+            justify-items: center;
+        }
+
+        .chest-item-info {
+            display: grid;
+            justify-items: center;
+        }
+
+        .inventory {
+            background-color: rgba(0, 0, 0, 0.4);
+
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+
+            width: 40%;
+            max-width: 40%;
+
+            height: 70%;
+            max-height: 70%;
+
+            padding: 1rem;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .chest {
+            background-color: rgba(0, 0, 0, 0.4);
+
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+
+
+            text-shadow: 1px 1px rgba(0,0,0,1);
+            width: 40%;
+            max-width: 40%;
+
+            height: 70%;
+            max-height: 70%;
+
+            padding: 1rem;
+        }
+
+        .inv-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+            max-height: 24rem;
+            min-height: 24rem;
+            overflow: auto;
+        }
+        
+        .chest-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: flex-start;
+
+            max-height: 24rem;
+            min-height: 24rem;
+            overflow: auto;
+        }
+
+        .inv-item {
+            justify-items: center;
+
+            width: 100%;
+            max-width: 10rem;  
+
+            display: grid;
+            background-color: rgba(0,0,0, 0.5);
+
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+            border-radius: 5px;
+
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .chest-item {
+            justify-items: center;
+
+            width: 100%;
+            max-width: 10rem;  
+
+            display: grid;
+            background-color: rgba(0,0,0, 0.5);
+
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+            border-radius: 5px;
+
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        input {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: bold;
+        }
+
+        .remove-quantity {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        span {
+            color: white;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            background-color: #0074D9;
+            padding: 3%;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #001f3f;
+            transition: background-color 0.2s;
+        }
+
+        .stock-button {
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+
+        .chest-close-button {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .chest-header {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+    </style>
+
+    <script>
+        const container = $(".chest-container")
+        container.hide();
+
+        window.addEventListener('message', event => {
+            if (event.data.open) {
+                container.show();
+
+                const weight = $(".weight")
+                weight.append(event.data.chestWeight)
+
+                const capacity = $(".capacity")
+                capacity.append(event.data.chestSize)
+
+                if (event.data.data == undefined ) {
+                    // if undefined itemlist chest is empity
+
+                } else {
+                    const chest = event.data.data
+
+                    for ( k in chest ) {
+                        // console.log(k);
+                        // console.log(chest[k]);
+
+                        const chestContainer = $(".chest-items-container");
+                        chestContainer.append(`
+                            <div id="chest-item${k}" class="chest-item">
+                                <div class="chest-item-info">
+                                    <img src="./assets/${k}.png" width="auto" height="30px" />
+                                    <input id="input" class="chestValue${k}" value="${chest[k]}" />
+                                </div>    
+                                <input id="input-qtd" placeholder="Quantidade" type="number" class="remove-quantity${k}" />
+                                <button class="stock-button" onclick="remItemInChest('${k}', 'remove-quantity${k}', '${k}')">Retirar</button>
+                            </div>    
+                        `)
+                    }
+                }
+
+                const inv = event.data.inv
+
+                for ( obj in inv ) {
+                    // console.log(obj)
+                    // console.log(inv[obj])
+
+                    const invContainer = $(".inv-container")
+                    invContainer.append(`
+                        <div id="inv-item${obj}" class="inv-item">
+                            <div class="inv-item-info">
+                                <img src="./assets/${obj}.png" width="auto" height="30px" />
+                                <input id="input" class="invValue${obj}" value="${inv[obj]}" />
+                            </div>    
+                            <input id="input-qtd" placeholder="Quantidade" type="number" class="put-quantity${obj}" />
+                            <button  class="stock-button" onclick="putItemInChest('${obj}', 'put-quantity${obj}', '${obj}')">Colocar</button>
+                        </div>    
+                    `)
+                    
+                }
+
+            } else {
+                if (event.data.open == false) {
+                    container.hide();
+                    const invContainer = $(".inv-container")
+                    invContainer.empty();
+
+                    const chestContainer = $(".chest-items-container");
+                    chestContainer.empty();
+
+                    const weight = $(".weight")
+                    const capacity = $(".capacity")
+
+                    weight.empty();
+                    capacity.empty();
+                }
+            }
+
+            if (event.data.refresh) {
+
+                const weight = $(".weight");
+
+                weight.empty();
+                weight.append(event.data.CurrentChestWeight);
+            }
+        })
+
+        function putItemInChest(_item, inputClass, obj) {
+            const amount = $(`.${inputClass}`).val();
+            const _amount = Number(amount)
+
+            if ( Number(amount) < 0 ) {
+                return
+            }
+
+            const new_value_check = Number($(`.invValue${obj}`).val()) - _amount
+            if (new_value_check >= 0 ) {
+                let invValue = $(`.invValue${obj}`).attr("value", Number($(`.invValue${obj}`).val()) - _amount)
+            }
+            
+
+            let newinvValue =  Number($(`.invValue${obj}`).val())
+            if (newinvValue == 0) {
+                if (newinvValue >= 0) {
+                    let itemdiv = $(`#inv-item${obj}`);
+                    itemdiv.empty();
+                    itemdiv.remove();
+                }
+            } 
+
+            if (new_value_check >= 0 ) {
+                const chestValue = $(`.chestValue${obj}`).attr("value", Number($(`.chestValue${obj}`).val()) + _amount)
+            }
+            
+
+            let chestItem = $(`.chestValue${obj}`).val();
+            if (new_value_check >= 0 ) {
+                if (chestItem  == undefined || chestItem == 0 ) {
+                let chestContainer = $(".chest-items-container");
+                chestContainer.append(`
+                        <div id="chest-item${obj}" class="chest-item">
+                                <div class="chest-item-info">
+                                    <img src="./assets/${obj}.png" width="auto" height="30px" />
+                                    <input id="input" class="chestValue${obj}" value="${_amount}" />
+                                </div>    
+                                <input placeholder="Quantidade" type="number" class="remove-quantity${obj}" />
+                                <button onclick="remItemInChest('${obj}', 'remove-quantity${obj}', '${obj}')">Retirar</button>
+                        </div>  
+                `)
+            }
+            }
+            
+
+            const data = { _item, _amount }
+            $.post("http://hpp_chests/putItem", JSON.stringify(data))
+
+            $.post("http://hpp_chests/refreshMenu")
+        }
+
+        function remItemInChest(_item, inputClass, obj) {
+            const amount = $(`.${inputClass}`).val();
+            const _amount = Number(amount);
+
+            if ( Number(amount) < 0 ) {
+                console.log(" INVALID VALUE ")
+                return
+            }
+
+            const data = { _item, _amount }
+
+            const new_value_check = Number($(`.chestValue${obj}`).val()) - _amount
+            if (new_value_check >= 0) {
+                const chestValue = $(`.chestValue${obj}`).attr("value", Number($(`.chestValue${obj}`).val()) - _amount)
+            }
+            
+
+            let newChestValue = Number($(`.chestValue${obj}`).val());
+
+            if ( newChestValue == 0 ) {
+                if (newChestValue >= 0) {
+                    let chestdiv = $(`#chest-item${obj}`);
+                    chestdiv.empty();
+                    chestdiv.remove();
+                }
+            }
+
+            let invItem = $(`.invValue${obj}`).val();
+
+            if (new_value_check >= 0) {
+                if (invItem == undefined || invItem == 0 ) {
+
+                let invContainer = $(".inv-container");
+                invContainer.append(`
+                        <div id="inv-item${obj}" class="inv-item">
+                            <div class="inv-item-info">
+                                <img src="./assets/${obj}.png" width="auto" height="30px" />
+                                <input id="input" class="invValue${obj}" value="${0}" />
+                            </div>    
+                            <input placeholder="Quantidade" type="number" class="put-quantity${obj}" />
+                            <button onclick="putItemInChest('${obj}', 'put-quantity${obj}', '${obj}')">Colocar</button>
+                        </div>
+                `)
+
+                } 
+            }
+            
+
+            if (new_value_check >= 0) {
+                const invValue = $(`.invValue${obj}`).attr("value", Number($(`.invValue${obj}`).val()) + _amount)
+            }
+            
+
+            $.post("http://hpp_chests/remItem", JSON.stringify(data))
+
+            $.post("http://hpp_chests/refreshMenu")
+        }
+
+        const closeButton = $(".chest-close-button")
+        closeButton.click(() => {
+            $.post("http://hpp_chests/closeMenu")
+        })
+    </script>
+
+</body>  
+
+</html>  

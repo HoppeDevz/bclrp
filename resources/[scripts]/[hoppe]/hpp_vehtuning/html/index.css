@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #fafafa;
+    text-shadow: 1px 1px rgba(0,0,0,1);
+    letter-spacing: 0.6px;
+    font-size: 12px;
+}
+
+.hoppe-vehtuning-app {
+    position: absolute;
+    right: 3%;
+    top: 10%;
+}
+
+span {
+    margin-top: 0.5rem;
+}
+
+.attributes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    max-width: 20rem;
+    min-width: 20rem;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px rgba(0,0,0,1);
+    padding: 1rem;
+}

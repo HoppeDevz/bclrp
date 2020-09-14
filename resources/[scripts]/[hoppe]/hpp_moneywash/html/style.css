@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.moneywash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    margin-left: 20rem;
+    margin-top: 10rem;
+    display: grid;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.submenu {
+    display: grid;
+}
+
+.logo {
+    margin-bottom: 0.5rem;
+}
+
+input {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: #fafafa;
+    padding: 0.5rem;
+
+    border-radius: 5px;
+    margin-bottom: 0.2rem;
+}
+
+button {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #ff00cc;
+    color: white;
+    font-weight: bold;
+    
+    margin-bottom: 0.2rem;
+    border-radius: 5px;
+
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #99007b;
+    transition: background-color 0.5s;
+}
+
+.amount-washed {
+    pointer-events: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}

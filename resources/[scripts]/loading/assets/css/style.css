@@ -1,0 +1,180 @@
+/**
+* SlentKat - Discord: Kisha#0001
+**/
+
+body {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 90;
+  margin: 0px;
+}
+
+#song-name {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    z-index: 99999;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #FFF;
+}
+
+#song {
+  position: absolute;
+  z-index: 99999;
+  width: 0px;
+  height: 0px;
+}
+
+#text-song {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 10px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+  z-index: 99999;
+  color: #FFF;
+}
+
+#vid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#video-autoplay {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Background */
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #000;
+  background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Copy blocker */
+.block-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  margin: 0px;
+  background: transparent;
+}
+
+#bgcolor {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+  width: 200px;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: calc(50%);
+  transform: translate(-50%, -50%) scale(1.3);
+  -webkit-animation: pulseBounce 2.5s infinite;
+  animation: pulseBounce 2.5s infinite;
+  text-align: center;
+  display: block;
+  z-index: 999999;
+}
+
+
+.loading-text {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 170px;
+    left: 0px;
+    text-align: center;
+    color: #FFF;
+    font-size: 36px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.tip-text {
+    margin-top: 20px;
+    color: #FFF;
+    height: 19px;
+    text-shadow: 1px 1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes pulseBounce {
+    0% {
+        margin-top: 0;
+        transform: translate(-55%, -50%) scale(1);
+    }
+    25% {
+        transform: translate(-55%, -50%) scale(1.05);
+    }
+    50% {
+        transform: translate(-55%, -50%) scale(1);
+    }
+    75% {
+        transform: translate(-55%, -50%) scale(1.08);
+    }
+    100% {
+        transform: translate(-55%, -50%) scale(1);
+    }
+}
+
+
+#container-equalizer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30vh;
+}
+
+#equalizer {
+  width: 100%;
+  height: 100%;
+}
+#equalizer .bar {
+  fill: url(#barBg);
+  -webkit-transition: all 0.4s cubic-bezier(0, 0, 0, 1.14);
+  transition: all 0.4s cubic-bezier(0.71, 0.09, 0.55, 1.14);
+}
+
+canvas {
+  display: block;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 100;
+}

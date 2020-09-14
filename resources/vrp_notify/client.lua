@@ -1,0 +1,5 @@
+RegisterNetEvent("Notify")
+AddEventHandler("Notify",function(css,mensagem)
+	PlaySoundFrontend(-1, "TENNIS_MATCH_POINT", "HUD_AWARDS")
+	SendNUIMessage({ css = css, mensagem = mensagem })
+end)

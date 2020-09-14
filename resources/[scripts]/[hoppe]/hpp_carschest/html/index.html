@@ -1,0 +1,409 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body id="body">
+    <div class="chestgarage-container">
+
+        <div class="inventory">
+            <button class="chestgarage-close-button">Fechar</button>
+
+            <div class="inv-items-container">
+
+            </div>
+        </div>
+
+        <div class="chest">
+            <button class="chestgarage-chest-header">BAÚ <span class="weight"></span>kg / <span class="capacity"></span>kg </button>
+
+            <div class="vehchest-items-container">
+
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+
+        *{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .chestgarage-container {
+            display: flex;
+            justify-content: center;
+
+            min-width: 40%;
+
+            margin-top: 4rem;
+        }
+
+        .inventory {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+            padding: 5%;
+        }
+
+        .inv-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            max-width: 30rem;
+            min-width: 30rem;
+
+            min-height: 25rem;
+            max-height: 25rem;
+
+            overflow: auto;
+        }
+
+        .vehchest-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            max-width: 30rem;
+            min-width: 30rem;
+
+            min-height: 25rem;
+            max-height: 25rem;
+
+            overflow: auto;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        
+        .inv-item-info {
+            display: grid;
+            justify-items: center;
+        }
+
+        .chest-item-info {
+            display: grid;
+            justify-items: center;
+        }
+
+        .chestgarage-close-button {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .chest {
+
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            
+            background-color: rgba(0, 0, 0, 0.3);
+            max-width: 40%;
+
+            height: 70%;
+            max-height: 70%;
+
+            padding: 5%;
+
+            min-width: 30%;
+        }
+
+        .chestgarage-chest-header {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .inv-item {
+            justify-items: center;
+
+            width: 100%;
+            max-width: 10rem;  
+
+            display: grid;
+            background-color: rgba(0,0,0, 0.5);
+
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+            border-radius: 5px;
+
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .chest-item {
+            justify-items: center;
+            text-align: center;
+
+            width: 100%;
+            max-width: 10rem;  
+
+            display: grid;
+            background-color: rgba(0,0,0, 0.5);
+
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+            border-radius: 5px;
+
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            border-width: 2px;
+            border-color: rgba(0, 0, 0, 0.2);
+
+            background-color: #fafafa;
+            padding: 1%;
+
+            max-width: 80%;
+
+            margin-bottom: 1%;
+
+            border-radius: 5px;
+        }
+
+        #input {
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-weight: bold;
+        }
+
+        span {
+            color: white;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+            background-color: #0074D9;
+            padding: 1%;
+
+            border-radius: 8px;
+        }
+
+
+    </style>
+
+    <script>
+        const container = $(".chestgarage-container");
+        container.hide();
+
+        window.addEventListener('message', event => {
+            if (event.data.open) {
+                container.show();
+
+                const inv = event.data.invItems;
+
+                for ( obj in inv ) {
+                    console.log(obj)
+                    console.log(inv[obj])
+
+                    const invContainer = $(".inv-items-container")
+                    invContainer.append(`
+                            <div id="inv-item${obj}" class="inv-item">
+                                <div class="inv-item-info">
+                                    <img src="./assets/${obj}.png" width="auto" height="30px" class="inv-item-img" />
+                                    <input id="input" class="invValue${obj}" value="${inv[obj]}" />
+                                </div>    
+                                <input placeholder="Quantidade" type="number" class="inv-remove-quantity${obj}" />
+                                <button class="inv-remove-quantity${obj}" onclick="putItemInVehChest('${obj}', 'inv-remove-quantity${obj}', '${obj}')">Colocar</button>
+                            </div>
+                    `)
+                }
+
+                const chest = event.data.vehChest;
+                for ( k in chest ) {
+                    console.log(k)
+                    console.log(chest[k])
+
+                    const chestContainer = $(".vehchest-items-container");
+                    chestContainer.append(`
+                            <div id="chest-item${k}" class="chest-item">
+                                <div class="chest-item-info">
+                                    <img src="./assets/${k}.png" width="auto" height="30px" />
+                                    <input id="input" class="chestValue${k}" value="${chest[k]}" />
+                                </div>    
+                                <input placeholder="Quantidade" type="number" class="remove-quantity${k}" />
+                                <button class="rembutton${k}" onclick="removeItemChest('${k}', 'remove-quantity${k}', '${k}')">Retirar</button>
+                            </div>  
+                    `)
+                }
+
+                const capacity = $(".capacity");
+                capacity.append( event.data.VehChestCapacity );
+
+                const weight = $(".weight");
+                weight.append( event.data.VehChestWeight )
+
+            } else {
+                if (event.data.open == false && event.data.open !== null) {
+                    container.hide();
+                    const invContainer = $(".inv-items-container")
+                    invContainer.empty();
+                    const chestContainer = $(".vehchest-items-container");
+                    chestContainer.empty();
+                    const capacity = $(".capacity");
+                    capacity.empty();
+                    const weight = $(".weight");
+                    weight.empty();
+                }
+
+                if (event.data.open == null) {
+                    if (event.data.refreshWeight) {
+                        const weight = $(".weight");
+                        weight.empty();
+
+                        weight.append( event.data.newWeight )
+                    }
+                }
+            }
+        })
+
+        function putItemInVehChest(_item, inputClass, obj) {
+            const timeoutbutton = $(`.inv-remove-quantity${_item}`);
+            timeoutbutton.attr("style", "pointer-events: none;");
+
+            const _amount = Number( $(`.${inputClass}`).val() )
+            if (_amount == 0) { return }
+            const PutQtd = Number ( $(`.invValue${obj}`).val() )
+
+            if (_amount <= PutQtd) {
+                
+                const elementInVehChest = $(`.chestValue${obj}`).val();
+                if ( elementInVehChest == undefined || elementInVehChest == 0 ) {
+                    const chestContainer = $(".vehchest-items-container");
+                    chestContainer.append(`
+                            <div id="chest-item${_item}" class="chest-item">
+                                <div class="chest-item-info">
+                                    <img src="./assets/${_item}.png" width="auto" height="30px" />
+                                    <input id="input" class="chestValue${_item}" value="${_amount}" />
+                                </div>    
+                                <input placeholder="Quantidade" type="number" class="remove-quantity${_item}" />
+                                <button class="rembutton${_item}" onclick="removeItemChest('${_item}', 'remove-quantity${_item}', '${_item}')">Retirar</button>
+                            </div>  
+                    `)
+
+                    const old_chest_value = $(`.invValue${_item}`).val()
+                    const chest_value = $(`.invValue${_item}`)
+
+                    chest_value.attr("value", Number(old_chest_value) - Number(_amount) )
+                } else {
+                    const old_value = $(`.chestValue${_item}`).val()
+                    const inputQtdVehChest = $(`.chestValue${_item}`)
+                    inputQtdVehChest.attr("value", Number(old_value) + Number(_amount) )
+
+                    const old_chest_value = $(`.invValue${_item}`).val()
+                    const chest_value = $(`.invValue${_item}`)
+
+                    chest_value.attr("value", Number(old_chest_value) - Number(_amount) )
+                }
+
+                // console.log("PutQtd - _amount => " + Number(PutQtd - _amount) )
+                if (PutQtd - _amount == 0) {
+                    const invDivItem = $(`#inv-item${_item}`)
+                    invDivItem.empty();
+                    invDivItem.remove();
+                } else {
+                    setTimeout(() => {
+                        timeoutbutton.attr("style", "pointer-events: all;");
+                    }, 1000)
+                }
+
+                const data = { _item, _amount }
+                $.post("http://hpp_carschest/putItemInVehChest", JSON.stringify(data))
+            }
+
+        }
+
+        function removeItemChest(_item, inputClass, obj) {
+            const timeoutbutton = $(`.rembutton${_item}`);
+            timeoutbutton.attr("style", "pointer-events: none;");
+
+            const _amount = Number( $(`.${inputClass}`).val() )
+            if (_amount == 0) { return }
+            const PutQtd = Number ( $(`.chestValue${obj}`).val() )
+
+            if (_amount <= PutQtd) {
+                const elementInv= $(`.invValue${obj}`).val();
+                if ( elementInv == undefined || elementInv == 0 ) {
+                    const invContainer = $(".inv-items-container");
+                    invContainer.append(`
+                            <div id="inv-item${obj}" class="inv-item">
+                                <div class="inv-item-info">
+                                    <img src="./assets/${obj}.png" width="auto" height="30px" />
+                                    <input id="input" class="invValue${obj}" value="${_amount}" />
+                                </div>    
+                                <input placeholder="Quantidade" type="number" class="inv-remove-quantity${obj}" />
+                                <button class="inv-remove-quantity${obj}" onclick="putItemInVehChest('${obj}', 'inv-remove-quantity${obj}', '${obj}')">Retirar</button>
+                            </div>
+                    `)
+
+                    const old_chest_value = $(`.chestValue${_item}`).val()
+                    const chest_value = $(`.chestValue${_item}`)
+
+                    chest_value.attr("value", Number(old_chest_value) - Number(_amount) )
+                } else {
+                    const old_value = $(`.invValue${_item}`).val()
+                    const inputQtdVehChest = $(`.invValue${_item}`)
+
+                    inputQtdVehChest.attr("value", Number(old_value) + Number(_amount) )
+
+                    const old_chest_value = $(`.chestValue${_item}`).val()
+                    const chest_value = $(`.chestValue${_item}`)
+
+                    chest_value.attr("value", Number(old_chest_value) - Number(_amount) )
+                }
+
+                if (PutQtd - _amount == 0) {
+                    const invDivItem = $(`#chest-item${_item}`)
+                    invDivItem.empty();
+                    invDivItem.remove();
+                } else {
+                    setTimeout(() => {
+                        timeoutbutton.attr("style", "pointer-events: all;");
+                    }, 1000);
+                }
+
+                const data = { _item, _amount }
+                $.post("http://hpp_carschest/remItemInVehChest", JSON.stringify(data))
+            }
+
+        }
+
+        const closeButton = $(".chestgarage-close-button");
+        closeButton.click(() => {
+            $.post("http://hpp_carschest/closeMenu");
+        })
+    </script>
+
+</body>  
+
+</html>  

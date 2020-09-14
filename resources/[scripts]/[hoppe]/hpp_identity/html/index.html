@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body id="body">
+    <div class="hppid-container">
+        <div class="infocharacter">
+            <div class="info"> <span id="content">Usuário </span><span id="value" class="userid"></span></div>
+            <div class="info"> <span id="content">Personagem </span><span id="value" class="charid"></span></div>
+            <div class="info"> <span id="content">Nome </span><span id="value" class="name"></span></div>
+            <div class="info"> <span id="content">Idade </span><span id="value" class="age"></span></div>
+            <div class="info"> <span id="content">Dinheiro </span><span id="value" class="money"></span></div>
+        </div>
+    </div>
+
+    <style>
+
+        *{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 12px;
+        }
+
+        .hppid-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: absolute;
+            padding: 2%;
+
+            border-radius: 8px;
+
+            width: 20%;
+
+            bottom: 6rem;
+            right: 5rem;
+        }
+
+        #value {
+            color: white;
+        }
+
+        #content {
+            color: #0074D9;
+            font-weight: bold;
+        }
+
+        .infocharacter {
+            display: grid;
+        }
+
+        .info {
+            display: inline;
+            margin-bottom: 3%;
+        }
+
+    </style>
+
+    <script>
+        const container = $(".hppid-container");
+        container.hide();
+
+        window.addEventListener('message', event => {
+          if (event.data.open) {
+            container.show();
+
+            const data = event.data.data
+
+            const userIdSpan = $(".userid");
+            userIdSpan.append(data.user_id);
+
+            const charIdSpan = $(".charid");
+            charIdSpan.append(data.charid);
+
+            const nameSpan = $(".name");
+            nameSpan.append(data.name);
+
+            const ageSpan = $(".age");
+            ageSpan.append(data.age);
+
+            const moneySpan = $(".money");
+            moneySpan.append(Number(data.bankMoney).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
+
+
+          } else {
+              container.hide();
+
+              const userIdSpan = $(".userid");
+              const charIdSpan = $(".charid");
+              const nameSpan = $(".name");
+              const ageSpan = $(".age");
+              const moneySpan = $(".money");
+
+              userIdSpan.empty();
+              charIdSpan.empty();
+              nameSpan.empty();
+              ageSpan.empty();
+              moneySpan.empty();
+          }
+        })
+    </script>
+
+</body>  
+
+</html>  

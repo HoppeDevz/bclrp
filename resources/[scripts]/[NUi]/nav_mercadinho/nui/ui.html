@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<link href="ui.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="http://officialyu.me/css/all.min.css" crossorigin="anonymous" />
+	</head>
+	<body>
+		<div id="actionmenu">
+				<div class="div-title-image" >
+					<img class="img-title" src="../assets/22620-store.gif" width="130px" height="130px" />
+				</div>
+			<div id="mainmenu">
+				<button class="menuoption" id="hover" data-sub="mercearia-comida"><i class="far fa-dollar-sign"></i><span data-title="Ver produtos">Comida</span></button>
+				<button class="menuoption" id="hover" data-sub="mercearia-utilidades"><i class="far fa-dollar-sign"></i><span data-title="Ver produtos">Utilidades</span></button>
+				<button class="menuoption" data-action="fechar"><i class="fal fa-times-circle" style="color: rgb(180, 69, 69)"></i>Fechar</button>
+			</div>
+			<div class="menu-products" data-parent="mainmenu" id="mercearia-comida" style="display: none;">
+				<button class="menuoption" id="hover" data-action="comprar-bread"><l><span data-title="comprar">Pão</span></l><r>R$150</r></button>
+				<button class="menuoption" id="hover" data-action="comprar-water"><l><span data-title="comprar">Água</span></l><r>R$150</r></button>
+				<button class="menuoption" id="hover" data-action="comprar-energydrink"><l><span data-title="comprar">RedBull</span></l><r>R$350</r></button>
+			</div>
+			<div class="menu-products" data-parent="mainmenu" id="mercearia-utilidades" style="display: none;">
+				<button class="menuoption" id="hover" data-action="comprar-backpack00"><l><span data-title="comprar">Mochila Pequena</span></l><r>R$4000</r></button>
+				<button class="menuoption" id="hover" data-action="comprar-backpack01"><l><span data-title="comprar">Mochila Média</span></l><r>R$6000</r></button>
+				<button class="menuoption" id="hover" data-action="comprar-radio"><l><span data-title="comprar">Radinho</span></l><r>R$2000</r></button>
+				<button class="menuoption" id="hover" data-action="comprar-clothes"><l><span data-title="comprar">Roupas</span></l><r>R$5000</r></button>
+				<button class="menuoption" id="hover" data-action="comprar-phone"><l><span data-title="comprar">Celular</span></l><r>R$3000</r></button>
+			</div>
+		</div>
+		<script src="ui.js" type="text/javascript"></script>
+	</body>
+</html>

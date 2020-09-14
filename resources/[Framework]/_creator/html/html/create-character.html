@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <link rel=stylesheet type=text/css href=../styles/main.css>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel=stylesheet>
+    <meta name=viewport content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js type=text/javascript></script>
+    <script src=https://kit.fontawesome.com/eb73bbb7e4.js crossorigin=anonymous></script>
+    <script src=../scripts/main.js></script>
+</head>
+
+<body class="view view--createcharacter" id="hoppecontainer" style="display: none;">
+    <div id=creatorcharacter class=wrapper v-cloak="" v-if="showCreator == 1">
+        <div class=left-container>
+            <div class=border-top></div><span class=left-title><p>CRIADOR DE</p><h2>PERSONAGEM</h2></span>
+            <div class=gender-select v-if="selectedPage == 0"><i id=male @click="changeGender('mp_m_freemode_01')" :class="{ genderhover: gender == 'mp_m_freemode_01' }" class="fas fa-male"></i> <i id=female @click="changeGender('mp_f_freemode_01')" :class="{ genderhover: gender == 'mp_f_freemode_01' }"
+                    class="fas fa-female"></i></div>
+            <div class=content-left v-if="selectedPage == 0">
+                <div class=menubuttons>
+                    <div class=slot v-for="(index, pairs) in menu1" :class="{ active: isActive(pairs) }" @click=changeMenu(pairs)>
+                        <div class=text><i style="font-size: 1.5vw;" :class=[[index.icon]]></i><br><span class=textEffect :data-text=index.name style="font-size: 0.6vw;">{{index.name}}</span></div>
+                    </div>
+                </div>
+                <div class=classes v-for="(k, v) in menu1[selectedMenu].options">
+                    <vue-slide-up-down :active=k.show :duration=1000>
+                        <center><span class=classes-title>{{k.name}}</span></center>
+                        <div class=classes-range><input type=range :min=k.min :max=k.max value=0 class=slider :step=k.step id=myRange @input=changeAppearence(v) v-model=k.value>
+                            <div class=classes-value>{{k.value}}</div>
+                        </div>
+                    </vue-slide-up-down>
+                </div>
+            </div>
+            <div v-else="" class=content-left>
+                <div class=menubuttons>
+                    <div class=slot v-for="(index, pairs) in menu3" :class="{ active: isActive3(pairs) }" @click=changeMenu3(pairs)>
+                        <div class=text><i style="font-size: 1.5vw;" :class=[[index.icon]]></i><br><span class=textEffect :data-text=index.name style="font-size: 0.6vw;">{{index.name}}</span></div>
+                    </div>
+                </div>
+                <div class=classes v-for="(a, b) in menu3[selectedMenu3].options">
+                    <div v-if="selectedMenu3 === 0">
+                        <center><span class=classes-title>{{a.name}}</span></center>
+                        <div class=classes-text><input :type=a.type :minlength=validation.charNameMin :maxlength=validation.charNameMax v-model=a.value></div>
+                    </div>
+                    <div v-else="">
+                        <vue-slide-up-down :active=a.show :duration=1000>
+                            <center><span class=classes-title>{{a.name}}</span></center>
+                            <div class=classes-range><input type=range :min=a.min :max=a.max value=0 class=slider :step=a.step id=myRange @input=changeClothes(b) v-model=a.value>
+                                <div class=classes-value>{{a.value}}</div>
+                            </div>
+                        </vue-slide-up-down>
+                    </div>
+                </div>
+                <div class=field__error v-if="errors.charName.length > 0">
+                    <p class=item v-for="error in errors.charName">{{ error }}</p>
+                </div>
+                <div class=field__error v-if="errors.date.length > 0">
+                    <p class=item v-for="error in errors.date">{{ error }}</p>
+                </div>
+            </div>
+        </div>
+        <div class=right-container v-if="selectedPage == 0">
+            <div class=border-top></div><span class=right-title><p>MODIFIQUE</p><h2>SEU ESTILO</h2></span>
+            <div class=content-right>
+                <div class=menubuttons-right>
+                    <div class=slot2 v-for="(index, pairs) in menu2" :class="{ active: isActive2(pairs) }" @click=changeMenu2(pairs)>
+                        <div class=text><i style="font-size: 1.5vw;" :class=[[index.icon]]></i><br><span class=textEffect :data-text=index.name style="font-size: 0.6vw;">{{index.name}}</span></div>
+                    </div>
+                </div>
+                <div class=classes v-for="(k, v) in menu2[selectedMenu2].options">
+                    <center><span class=classes-title>{{k.name}}</span></center>
+                    <div class=classes-range><input type=range :min=k.min :max=k.max value=0 class=slider :step=k.step id=myRange @input=changeStyle(v) v-model=k.value>
+                        <div class=classes-value>{{k.value}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=footer-container><a v-if="selectedPage == 0"><button class=footer-button @click=changePage(1)>Continuar</button></a> <a v-else=""><button class=footer-button @click=finishCreator()>Finalizar Criação</button></a></div>
+    </div>
+
+    <script>
+        const container = document.querySelector("#hoppecontainer");
+        setTimeout(() => {
+            container.setAttribute("style", "display:block;");
+        },3000);
+    </script>
+    
+</body>
+
+</html>

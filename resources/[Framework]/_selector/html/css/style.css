@@ -1,0 +1,357 @@
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../font/poppins/Poppins-Regular.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Medium;
+	src: url('../font/poppins/Poppins-Medium.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Bold;
+	src: url('../font/poppins/Poppins-Bold.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../font/poppins/Poppins-SemiBold.ttf'); 
+  }
+  
+  * {
+    font-family: 'Poppins-Regular';
+    user-select: none;
+    overflow: none;
+    text-overflow: ellipsis;
+}
+
+		body{
+			overflow: hidden;
+			background-size: 100%;
+			user-select: none;
+		}
+		.contain{		
+			width:100%;
+			height:100%;
+			display:flex;
+			-webkit-align-items: center;
+			align-items:left;
+			padding-left: 60px;
+			-webkit-justify-content: center;
+			justify-content: left;
+			/*background-image: url('../img/logo.png');
+			background-size: 200px;
+  			background-repeat: no-repeat;
+  			background-position: 5% 15%; */
+		}
+		#logo {
+			z-index:1;
+			
+		}
+		#head{			
+			min-width: 450px;
+			background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.02)); 
+			left:150px;
+			border-radius: 2px;			
+			overflow: hidden;						
+			transform: perspective(400px) rotateY(5deg); 
+			transition: all 0.5s;				
+			padding-bottom: 20px;			 
+		}
+		#main{		
+			margin: 15px 20px 5px 25px;					
+			padding-bottom: 10px;					
+		}		
+		.line {
+			border-bottom:  rgba(255,255,255,0.2) 1px solid; 
+		}
+		.header-text{			
+			background: rgba(0,0,0,0.19);
+			position: relative;
+			padding: 15px 20px;
+			font-size: 1.3em;
+			color: white;  
+			border-bottom:  rgba(255,255,255,0.2) 1px solid;    
+		}
+		#head:hover{
+			transform: perspective(400px) rotateY(0); 
+			transition: all 0.5s; background: rgba(0,0,0,0.19);
+		}
+		.char{			
+			background: linear-gradient(to right, rgba(0,123,193,0.5), rgba(0,0,0,0.15)); 	
+			background-size: 200% 200%;
+			background-position: 100% 100%;
+			-webkit-align-items: center;
+			align-items:center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			margin-top:5px;
+			text-align:center;
+			width: 450px;
+			height: 130px;
+			border-radius: 4px;			
+			color:black;
+			display:flex;
+			margin-right:10px;	
+			border-left: rgba(255,255,255,0.7) 8px solid;
+		}
+		.char img{
+			width: 5.5vw;
+			padding-left: 7px;
+			padding-right: 7px;
+			border-right: rgba(255,255,255,0.2) 1px solid;
+		}
+		.char:hover{
+			background-position: 70% 100%;
+			background-color: rgba(0,31,63,0.9);
+			border-left: rgb(0,123,193) 8px solid;
+			border-bottom: rgb(0,123,193) 1px solid;
+			border-right: rgb(0,123,193) 1px solid;
+			border-top: rgb(0,123,193) 1px solid;
+		}
+		.char .content	{
+			width: 100%;	
+			text-align: left;
+			padding-left: 7px;
+			padding-right: 50px;
+			
+		}
+		.nometitle{
+		  font-size: 15px;
+		  color: black;
+		  font-family: Poppins-Regular;	
+		}
+			.lname {
+			padding-left: 10px;
+			margin-top: 3px;		
+			font-family: "Poppins-Regular", Poppins-Regular, serif;	
+			font-weight: normal;
+			color:white;
+			border-radius: 10px; 
+			font-size: 1.5vw;
+			}
+			.money, .job{
+			padding-left: 10px;
+			margin-top: 2px;		
+			font-weight: normal;
+			color:white;
+			border-radius: 10px; 
+			font-size: 0.8vw;
+			
+		}
+		.fname{
+			padding-left: 10px;
+			font-size: 1.5vw;		
+			font-weight: normal;
+			color:white;
+			border-radius: 10px; 
+		}			
+		.buttons {	
+			width: 50%;
+			height:100%;	
+			display:flex;					
+			flex-direction: column;
+			-webkit-align-items: center;
+			align-items: center;
+			-webkit-justify-content: center;
+			justify-content: center;	
+			border-radius: 0px 4px 4px 0px;
+			transition: all 0.4s;
+		}
+		.buttons .b1 {
+			border-radius: 3px;
+			background-color: rgba(0,0,0,0.1);
+			background-size: 200%; 
+			height: 30%;
+			width: 50%;
+			display:flex;		
+			margin-bottom: 5px;
+			align-items: center;			
+			justify-content: center;	
+			transition: all 0.2s;		
+		}
+		.buttons .b2 {
+			display:flex;		
+			align-items: center;			
+			justify-content: center;
+			height: 30%;
+			width: 50%;
+			background-color: rgba(0,0,0,0.1);
+			background-size: 200%; 
+			transition: all 0.2s;
+			border-radius: 3px;
+		}
+		.create{	
+			width: 100%;
+			height: 100%;	
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 0.8vw;
+			color:white;
+			background: transparent;
+			border: 0px solid red;
+		}
+		.buttons .b1:hover {			
+			width: 95%;
+			background-color: rgba(0,123,193,0.8);
+			-webkit-box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+			-moz-box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+			box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+		}
+
+		.buttons .b2:hover {
+			width: 95%;
+			color:white;	
+			background-color: rgba(0,123,193,0.5); 
+			-webkit-box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+			-moz-box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+			box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+		}	
+
+		.create .name, .delete .name{
+			font-size: 0.8vw;
+			display:none;
+		}
+		.create:hover .name, .delete:hover .name{
+			
+			display: inline;
+			font-size: 0.8vw;			
+			transition: all 2s;
+			animation: fade-in 1.5s;
+		}
+	
+
+		.b1:not(:hover) .name.did-fade-in,.b2:not(:hover) .name.did-fade-in {
+			display: inline;
+			font-size: 0.8vw;
+			animation: fade-out 1.5s;
+		}
+
+		@keyframes fade-in {
+		  from {
+			transition: all 1s;
+			opacity: 0;
+		  }
+		  to {
+			transition: all 1s;
+			opacity: 1;
+		  }
+		}
+		
+		@keyframes fade-out {
+		  from {
+			transition: all 1s;
+			opacity: 1;
+		  }
+		  to {
+			transition: all 1s;
+			opacity: 0;
+		  }
+		}
+
+		.delete{			
+			width: 100%;
+			height: 100%;	
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 0.8vw;			
+			color:#f2f2f2;
+			background: transparent;
+			border: 0px solid red;
+			transition: all 0.4s;			
+		}
+		.delete:hover{
+			color:white;
+		}
+		.createnew{
+			line-height: 20px;
+			width: 60%;
+			height:40px;
+			margin-top: 10%;
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 15px;
+			color:#f2f2f2;
+			border: 0;
+			border-radius: 4px;
+			padding: 10px 15px;
+			background-color: rgba(0,0,0,0.1);
+			background-size: 200%; 
+			transition: all 0.4s;
+		}
+		.createnew:hover{
+			color:white;
+			background: rgba(0,123,193,0.8);
+			background-position: 100% 100%;
+			-webkit-box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+			-moz-box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+			box-shadow: 0px 0px 3px 1px rgb(0,123,193);
+		}
+		.form-group{
+						font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 20px;
+		}
+		.ctext{
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 30px;
+
+			margin-top: 16%;
+		}
+		#creatorcontain{
+			margin-top: -19%;
+			position:relative;
+			width:100%;
+			height:100%;
+			z-index:1;
+			background:#fff;
+			background-size:30% 40%;
+			background-repeat: no-repeat;
+			background-position: center 55%;
+		}
+
+		#creator{
+			width: 100%;
+			height: 20%;
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			position:absolute;
+			text-align:center;
+			top: 40%;
+
+		}
+		#name{
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 20px;
+			width: 250px;
+			border:  0;
+			background:transparent;
+			background-image: url('../img/input.png');
+			background-position: center;
+  			background-size: 100% 100%;
+  			background-repeat: no-repeat;
+    		padding: 15px 30px;
+   			margin: 0 0 10px 0;
+			margin: 5px auto;
+		}
+		#name:hover, #name:active, #name:focus{
+			background-image: url('../img/input2.png');
+			border: 0px;
+
+		}
+		#lastname{
+			font-family: "Poppins-Regular", Poppins-Regular, serif;
+			font-size: 20px;
+			width: 250px;
+			border:  0;
+			background:transparent;
+			background-image: url('../img/input.png');
+			background-position: center;
+  			background-size: 100% 100%;
+  			background-repeat: no-repeat;
+    		padding: 15px 30px;
+   			margin: 0 0 10px 0;
+			margin: 5px auto;
+		}
+		#lastname:hover, #name:active, #name:focus{
+			background-image: url('../img/input2.png');
+			border:  0;
+
+		}
+

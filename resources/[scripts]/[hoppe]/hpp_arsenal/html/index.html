@@ -1,0 +1,161 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body id="body">
+    <div class="hpparsenal-container">   
+        <div class="arsenal-container">
+            <h1>Arsenal</h1>
+            <button class="stock-guns">Guardar Armas</button>
+            <div class="gunList">
+
+            </div>
+            <button class="arsenal-close-button">Fechar</button>
+        </div>
+    </div>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }       
+
+
+        h1,h2{
+            color: white;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background-color: #0074D9;
+            text-align: center;
+
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.5s;
+        }
+
+        button:hover {
+            background-color: #001f3f;
+            transition: background-color 0.5s;
+        }
+
+        .hpparsenal-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .weapon-button {
+            display: flex;
+            align-items: center;
+            min-width: 20rem;
+            max-width: 20rem;
+            margin-top: 1rem;
+            margin-left: -0.5rem;
+
+            font-size: 10px;
+
+            border-radius: 3px;
+        }
+
+        .weapon-button img {
+            padding-right: 2vw;
+        }
+
+        .gunList {
+            text-align: center;
+            width: 96%;
+            max-width: 96%;
+
+            height: 20rem;
+            max-height: 20rem;
+
+            overflow: auto;
+
+            -ms-overflow-style: none;
+            padding: 2rem;
+        }
+
+        .arsenal-container {
+            display: grid;
+            text-align: center;
+            width: 30%;
+
+            border-radius: 5px;
+
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+    </style>
+
+    <script>
+        const container = $(".hpparsenal-container");
+        container.hide();
+
+        window.addEventListener('message', event => {
+            if (event.data.open) {
+                container.show();
+
+                const data = event.data.data
+                for ( gun in data ) {
+                    console.log(gun) // gunName
+                    console.log(data[gun]) // data[gun][0] = itemName | data[gun][1] = GiveAmountAmmo
+
+                    let gunDiv = $(".gunList");
+
+                    gunDiv.append(`
+                    <div class="guncomponent">
+                        <button class="weapon-button" onclick="giveWeapon('${data[gun][0]}','${data[gun][1]}', '${gun.toUpperCase()}')">
+                            <img src="../assets/${data[gun][0]}.png" width="${data[gun][2]}px" heigth="60px" />
+                            <h2>${gun.toUpperCase()}</h2>
+                        </button>
+                    </div>
+                    `)
+                }
+                
+            } else {
+                container.hide();
+                let gunDiv = $(".gunList");
+                gunDiv.empty();
+            }
+        })
+
+        function giveWeapon(_modelName, _amountAmmo, _gunName) {
+            let data = {  _modelName, _amountAmmo, _gunName }
+            $.post("http://hpp_arsenal/giveWeapon", JSON.stringify(data))
+        }
+
+        const stockButton = $(".stock-guns");
+        stockButton.click(() => {
+            $.post("http://hpp_arsenal/clearWeapons")
+        })
+
+        const closeButton = $(".arsenal-close-button");
+        closeButton.click(() => {
+            $.post("http://hpp_arsenal/closeMenu")
+            let gunDiv = $(".gunList");
+            gunDiv.empty();
+        })
+    </script>
+
+</body>  
+
+</html>  

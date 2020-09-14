@@ -1,0 +1,56 @@
+.ammu-nation-app {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+}
+
+.ammu-nation-container {
+    display: grid;
+    max-width: 15rem;
+    min-width: 15rem;
+
+    max-height: 20rem;
+    min-height: 20rem;
+
+    overflow: auto;
+}
+
+button {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 0.4rem;
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 4px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+
+    transition: background-color 0.2s;
+    outline: none;
+}
+
+button:hover {
+    transition: background-color 0.2s;
+    background-color: black;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #111111;
+    border-radius: 10px;
+}

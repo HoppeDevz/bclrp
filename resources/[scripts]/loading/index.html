@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<script src="https://kit.fontawesome.com/d5821cdbca.js"></script>
+
+	<title>Carregando...</title>
+</head>
+<body id="body">
+	<div id="song">
+		<audio id="audio-song" volume="0.5" autoplay loop preload>
+			<source src="assets/stream/song.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<div id="text-song">
+		Pressione P para <span>pausar</span> a música<br />
+		Pressione W para aumentar o volume<br />
+		Pressione S para diminuir o volume
+	</div>
+	<!--<div id="song-name">
+        <b>Baile e Copão - Dash (Prod. Indigo)</b>
+    </div>-->
+	<div id="particles-js"></div> 
+	<div id="vid">
+		<video autoplay muted loop preload="metadata" id="video-autoplay" style="width: 100%;">
+			<source src="assets/stream/ksrploading.mp4" type="video/mp4">
+		</video>
+		<div id="container-equalizer">
+			<svg id="equalizer" v-if="bars.length > 1">
+				<defs>
+				<linearGradient id="barBg" gradientTransform="rotate(90)">
+					<stop offset="60%" style="stop-color:rgb(0,0,0);stop-opacity:.4" />
+					<stop offset="80%" style="stop-color:rgb(0,0,0);stop-opacity:.8" />
+					<stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1"  />
+				</linearGradient>
+				</defs> 
+				<rect
+				v-for="(value, i) in bars"
+				class="bar"
+				:width="100 / bars.length + '%'"
+				:height="value + '%'"
+				:x="i * 100 / bars.length + '%'"
+				:y="100 - value + '%'"
+				/>
+			</svg>
+		</div>
+	</div>
+	<div class="logo" id="logo" data-logo="default">
+		<img src='assets/img/logo.png' style='max-width: 200px'; />
+	</div>
+	<div class="overlay">
+		<div class="block-copy"></div>
+		<div class="loading-text">
+			<div class="tip-text">Leia as regras no nosso Discord e respeite os outros cidadãos.</div>
+		</div>
+	</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="assets/js/typed.min.js"></script>
+<script src="assets/js/ui.js"></script>
+<script>
+const size = 100;
+const tempo = 350; // BPM
+
+new Vue({
+  el: '#equalizer',
+  data: {
+    bars: [],
+  },
+  mounted() {
+    this.updateBars();
+    setInterval(this.updateBars, this.getDelay());
+  },
+  methods: {
+    getBars() {
+      return new Array(size)
+        .fill(1)
+        .map(() => Math.ceil(Math.random() * (50 - 5) + 5));
+    },
+    updateBars() {
+      this.bars = this.getBars();
+    },
+    getDelay() {
+      return 60 * 1000 / tempo;
+    }
+  }
+});
+
+var video = document.getElementById("video-autoplay");
+video.addEventListener('loadedmetadata', function() {
+  if (video.buffered.length === 0) {
+  	return;
+  }
+  var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
+  console.log(bufferedSeconds + ' seconds of video are ready to play!');
+});
+</script>
+
+</html>

@@ -1,0 +1,257 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body id="body">
+    <div class="garage-container">
+        <div class="garage-div">
+            <button
+                style="border: none; background: transparent; color: white; font-size: 13px; outline: none;"
+            >
+                <i 
+                style="vertical-align: bottom; font-size: 12px;"
+                class="material-icons"
+                >house
+                </i>
+                GARAGEM
+            </button>
+            <div class="allVehs">
+
+            </div>
+            <button class="stock-garage-button">
+                <i 
+                style="vertical-align: bottom; font-size: 12px;"
+                class="material-icons"
+                >arrow_circle_down
+                </i>
+                Guardar
+            </button>
+            <button class="close-garage-button">
+                <i 
+                style="vertical-align: bottom; font-size: 12px;"
+                class="material-icons"
+                >close
+                </i>
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        span {
+            color: #fafafa;
+            font-size: 12px;
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 12px;
+            margin-left: 5rem;
+            max-width: 20rem;
+            min-width: 20rem;
+            color: white;
+            background-color: #0074D9;
+            border-radius: 8px;
+        }
+
+        .garage-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            margin-top: 5%;
+
+            max-height: 70%;
+        }
+
+        ::-webkit-scrollbar {
+            background-color: transparent;
+            border-radius: 5px;
+        }
+
+        .garage-div {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 1rem;
+
+            max-width: 40rem;
+            min-width: 40rem;
+        }
+
+        .vehicleButton {
+            border: none;
+            background-color: #0074D9;
+            color: white;
+            font-weight: bold;
+            outline: none;
+        }
+
+        .stock-garage-button {
+            color: white;
+            font-weight: bold;
+            outline: none;
+            background-color: #0074D9;
+            border: none;
+            margin-bottom: 10px;
+
+            padding: 10px;
+            border-radius: 8px;
+
+            margin-top: 2rem;
+        }
+
+        .close-garage-button {
+            font-weight: bold;
+            color: white;
+            outline: none;
+            background-color: #0074D9;
+            border: none;
+
+            padding: 10px;
+            border-radius: 8px;
+
+            margin-top: 2rem;
+        }
+
+        button {
+            font-size: 12px;
+        }
+
+        .allVehs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            max-width: 40rem;
+            min-width: 40rem;
+
+            min-height: 20rem;
+            max-height: 20rem;
+
+            text-align: center;
+
+            overflow: auto;
+        }
+
+        .allVehs button {
+            margin-bottom: 10px;
+            padding: 10px;
+
+            max-width: 200px;
+
+            transition: background-color 0.5s;
+        }
+
+        .vehContent {
+            display: inline-table;
+            border-radius: 8px;
+            
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+            text-align: center;
+            margin: 2rem;
+
+            width: 100%;
+            height: 100%;
+            max-width: 200px;
+            max-height: 10rem;
+        }
+
+        .allVehs button:hover {
+            background-color: #001f3f;
+            transition: background-color 0.5s;
+        }
+
+        .test {
+            display: grid;
+        }
+        
+    </style>
+
+    <script>
+
+        const container = $(".garage-container");
+        const closebutton = $(".close-garage-button");
+        container.hide();
+
+        window.addEventListener('message', event => {
+            if (event.data.open) {
+                container.show();
+                event.data.vehicles.map(veh => {
+                    let vehName = veh.vehicle;
+                    let vehPlate = veh.plate;
+                    const allvehsDiv = $(".allVehs");
+
+                    allvehsDiv.append( `
+
+                    <div class="vehContent">
+                        <div class="test">
+                        <img src="${veh.imageURL}" width="200px" heigth="100px" />
+                        <button class="vehicleButton" id="${veh.vehicle}" >
+                            <i 
+                                style="vertical-align: bottom; font-size: 12px;"
+                                class="material-icons"
+                                >directions_car
+                            </i>
+                            ${veh.vehicle.toUpperCase()}
+                            </button>
+                        </div>
+                    </div>    
+                    
+                    ` )
+
+                    let button = $(`#${veh.vehicle}`);
+                    button.click(() => {
+                        spawnVehicle(veh.vehicle, veh.plate)
+                    })
+                })
+            } else {
+                container.hide();
+            }
+        })
+
+        const stockButton = $(".stock-garage-button");
+
+        stockButton.click(() => {
+            $.post("http://hpp_garages/despawnCar");
+        })
+
+        spawnVehicle = (vehicle, plate) => {
+            let data = { vehicle, plate }
+            $.post("http://hpp_garages/spawnCar", JSON.stringify(data))
+        }
+
+        closebutton.click(() => {
+            const allvehsDiv = $(".allVehs");
+            allvehsDiv.empty();
+            container.hide();
+            $.post("http://hpp_garages/closeMenu")
+        })
+
+    </script>
+
+</body>  
+
+</html>  

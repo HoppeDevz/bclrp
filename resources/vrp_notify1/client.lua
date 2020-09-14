@@ -1,0 +1,15 @@
+RegisterNetEvent("Notify")
+AddEventHandler("Notify",function(css,mensagem)
+	PlaySoundFrontend(-1, "Pin_Good", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS", 1)
+	SendNUIMessage({ css = css, mensagem = mensagem, time = 7000 })
+end)
+
+RegisterNetEvent("NotifyAdm")
+AddEventHandler("NotifyAdm",function(nomeadm,mensagem)
+	SendNUIMessage({ css = "importante", mensagem = "<b>"..mensagem.."</b><br>- "..nomeadm, time = 20000 })
+end)
+
+RegisterNetEvent("NotifyAdmCallback")
+AddEventHandler("NotifyAdmCallback",function(nomeadm,mensagem)
+	SendNUIMessage({ css = "aviso", mensagem = "<b>"..mensagem.."</b><br>- Privada de "..nomeadm, time = 20000 })
+end)

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+	<startFrom value="5050" />
+	<filePathHash value="0" />
+	<proxies>
+		<Item>apa_distlodlights_small031</Item>
+		<Item>dt1_06_long_0</Item>
+		<Item>dt1_06_strm_0</Item>
+		<Item>hei_dt1_06</Item>
+		<Item>hei_dt1_06_long_0</Item>
+		<Item>hei_dt1_06_strm_0</Item>
+		<Item>hei_dt1_occl_07</Item>
+		<Item>hei_dt1_rd1</Item>
+		<Item>hei_dt1_rd1_long_1</Item>
+		<Item>rc12b_default</Item>
+		<Item>rc12b_hospitalinterior</Item>
+		<Item>1florholl_milo_</Item>
+		<Item>1florrooms2_milo_</Item>
+		<Item>4floorhollh_milo_</Item>
+		<Item>4floorrooms2h_milo_</Item>
+		<Item>5floorrooms1_milo_</Item>
+		<Item>5floorrooms2_milo_</Item>
+		<Item>elevatorbig_milo_</Item>
+		<Item>elevatorsmale_milo_</Item>
+		<Item>int_hospitalnew_placement</Item>
+		<Item>stairs1h_milo_</Item>
+		<Item>stairs2h_milo_</Item>
+	</proxies>
+</SInteriorOrderData>

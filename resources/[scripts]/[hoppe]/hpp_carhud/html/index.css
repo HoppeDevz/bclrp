@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.hoppe-carhud {
+    position: absolute;
+    left: 2.5rem;
+    bottom: 21%;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.velocity-content {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+	text-shadow: 1px 1px rgba(0,0,0,1);
+	
+}
+
+.gas-content {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+	text-shadow: 1px 1px rgba(0,0,0,1);
+}

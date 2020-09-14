@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body id="body">
+    <div class="mechanic-container">
+        <div class="items">
+            <div style="display: flex; justify-content: space-between; ">
+                <h1>Computador Oficina</h1><button class="mechanic-close-button">X</button>
+            </div>
+            
+
+            <div class="vehtyres">
+                <h2 class="item-name">Pneu</h2>
+                <img src="assets/vehtyres.png" width="100px" height="auto" />
+
+                <input placeholder="Quantidade" class="value-add-vehtyres" /> <button id="add-button" class="add-button-vehtyres" >Adicionar</button>
+
+                <span class="content">Quantidade: <span class="value-vehtyes"></span> </span>
+            </div>
+
+            <div class="engines">
+                <h2 class="item-name">Motor</h2>
+                <img src="assets/vehengine.png" width="100px" height="auto" />
+
+                <input placeholder="Quantidade" class="value-add-engine" /> <button id="add-button" class="add-button-engine" >Adicionar</button>
+                
+
+                <span class="content">Quantidade: <span class="value-engine"></span> </span>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+
+        *{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        .mechanic-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        h1 {
+            color: white;
+            font-weight: bold;
+        }
+
+        .item-name {
+            text-align: center;
+        }
+        
+        #add-button {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-radius: 2px;
+
+            border: none;
+            outline: none;
+            background-color: #0074D9;
+            margin: 10px;
+            text-align: center;
+
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.5s;
+        }
+
+        #add-button:hover {
+            background-color: #001f3f;
+            transition: background-color 0.5s;
+        }
+
+        input {
+            outline: none;
+            padding: 1rem;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+        }
+
+        .mechanic-close-button {
+            max-width: 2rem;
+            max-height: 2rem;
+
+            min-width: 2rem;
+            max-height: 2rem;
+
+            border-radius: 16px;
+
+            border: none;
+            outline: none;
+            background-color: #0074D9;
+            margin: 10px;
+            text-align: center;
+
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.5s;
+        }
+
+        .mechanic-close-button:hover {
+            background-color: #001f3f;
+            transition: background-color 0.5s;
+        }
+
+        .items {
+            /*background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);*/
+            border-radius: 5px;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        .items div {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            padding: 1rem;
+            margin: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+
+    </style>
+
+    <script src="index.js"></script>
+
+</body>  
+
+</html>  

@@ -1,0 +1,18 @@
+Tutorial Instação
+1º Extraia os aquivos do .rar
+2º Cole na pasta "resources" do seu servidor e de start no server.lua^
+3º Desligue seu servidor, delete a pasta cache e ligue novamente para as roupas funcionarem
+
+Caso não funcione ingame
+1º Você precisa ter uma Key Patreon.
+2º Se Você tiver qualquer outro Script com Roupas EUP na sua base, é necessário conferir se não existe nenhum arquivo com o mesmo nome dos que estão nesse pack.
+
+- Eu tenho um arquivo nomeado igual, o que eu faço? 
+- É Necessário deixar somente um, caso contrário vai dar conflito e algum dos dois não vai estar habilitado.
+
+- É Possivel juntar esse pack de roupas com outro da minha base?
+- Claro, basta você copiar os arquivos da pasta "stream" desse pack, e jogar dentro da pasta "stream" do pack que você quer mesclar. 
+
+Qualquer outra dúvida pode entrar em contato via discord.
+𝐍𝐢𝐟𝐭𝐲'𝐒𝐳 𝐒𝐇𝐎𝐏 ®️ - discord.gg/Rybm6cM
+Discord Pessoal - Nifty'Sz#6969

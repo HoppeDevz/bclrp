@@ -1,0 +1,184 @@
+html {
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	background-color: transparent !important;
+}
+
+body {
+	background-color: transparent !important;
+}
+
+#displayHud {
+	right: 30px;
+	bottom: 20px;
+	display: none;
+	position: absolute !important;
+	z-index: 999 !important;
+}
+
+#displayInfos {
+	float: left;
+	font-size: 11.5px;
+	line-height: 18px;
+	text-align: right;
+	padding: 34px 20px 0 0;
+	letter-spacing: 0.6px;
+	color: rgba(255,255,255,0.5);
+	text-shadow: 1px 1px rgba(0,0,0,1);
+	font-family: Arial,Helvetica,sans-serif;
+	position: absolute;
+    margin-top: 35px;
+    margin-left: 25px;
+}
+
+span {
+	font-family: Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	margin-left: 0.7rem;
+	color: #fafaff;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+}
+
+#displayInfos b {
+	color: rgba(255,255,255,0.8);
+}
+
+#displayBars {
+	float: left;
+	width: 156px;
+	border-radius: 6px;
+	padding: 15px 15px 5px;
+	background: rgba(0,0,0,0.3);
+	box-shadow: 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.barFull {
+	width: 100%;
+	float: left;
+}
+
+.health {
+	float: left;
+	width: 16px;
+	height: 16px;
+	opacity: 0.8;
+	margin: 0 0 7px;
+	background: url("images/health.png") center no-repeat;
+}
+
+.healthBar {
+	float: left;
+	width: 130px;
+	height: 7px;
+	border-radius: 10px;
+	margin: 4px 0 9px 10px;
+	/*background: rgba(80,155,80,0.3);*/
+	background: rgba(187,200,222, 0.3);
+}
+
+.healthHover {
+	float: left;
+	height: 7px;
+	border-radius: 10px;
+	background: rgba(187,200,222, 1);
+	transition: all 0.9s;
+}
+
+.staminaOrGas {
+	float: left;
+	width: 16px;
+	height: 16px;
+	opacity: 0.8;
+	margin: 0 0 7px;
+	background: url("images/stamina.png") center no-repeat;
+}
+
+
+.staminaOrGasBar {
+	float: left;
+	width: 130px;
+	height: 7px;
+	border-radius: 10px;
+	margin: 4px 0 9px 10px;
+	background: rgba(187,200,222, 0.3);
+}
+
+.staminaOrGasHover {
+	float: left;
+	height: 7px;
+	border-radius: 10px;
+	background: rgba(187,200,222, 1);
+	transition: all 0.9s;
+}
+
+#displayVehicle {
+    right: 92px;
+    bottom: 178px;
+	display: none;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: right;
+	color: rgba(255,255,255,0.9);
+	position: absolute !important;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#displayVehicle.over-telefone {
+	right: 332px !important;
+}
+
+.seatbelt {
+	color: rgba(134,208,73,0.6) !important;
+}
+
+#displayVehicle b {
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	padding-right: 5px;
+	color: rgba(255,255,255,0.3);
+}
+
+#displayVehicle s {
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	padding-right: 5px;
+	color: rgba(134,208,73,0.6);
+	text-decoration: none;
+}
+
+cor {
+	color: rgba(244,196,65,255);
+}
+
+#displayLogo {
+	display: flex;
+	margin-left: 39%;
+	margin-top: -1%;
+}
+
+#movieTop {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 13%;
+	background: #000;
+	position: absolute;
+	display: none;
+	z-index: 999 !important;
+}
+
+#movieBottom {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 13%;
+	background: #000;
+	position: absolute;
+	display: none;
+	z-index: 999 !important;
+}

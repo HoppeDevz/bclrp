@@ -1,0 +1,2464 @@
+<html>
+
+<head>
+    <title>HoppeBanking</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold"
+		title="roboto">
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>	
+	<script src="https://kit.fontawesome.com/eb73bbb7e4.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body id="body">
+    <div class="sell-vehs-container">
+        <div class="catalog">
+            <h1>Concessionária</h1>
+            <button class="closeButton" >Sair</button>
+            <button class="cars-route-button">Carros</button>
+            <button class="imports-route-button">Importados</button>
+            <button class="bike-route-button">Motos</button>
+            <div class="vehicles-sells">
+
+                <div class="product" id="carros">
+                    <h2>Nome: Adder</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-adder-stock" value="10" />
+                        <input id="trunk" class="vehicle-adder-trunk" value="20" style="display: none;" />  
+                    </div>
+                    
+                    <h3>Preço: R$720.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/9e/Adder-GTAV-front.png/revision/latest?cb=20190106193205" width="200px" height="100px" />
+                    <input class="imageUrl-adder" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/9e/Adder-GTAV-front.png/revision/latest?cb=20190106193205" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('adder', 720000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Alpha</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-alpha-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-alpha-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$330.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/9/94/Alpha-GTAV-front.png/revision/latest?cb=20181113142850&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-alpha" value="https://vignette.wikia.nocookie.net/gta/images/9/94/Alpha-GTAV-front.png/revision/latest?cb=20181113142850&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('alpha', 330000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Asea</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-asea-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-asea-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$155.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/5/58/Asea-GTAV-front.png/revision/latest?cb=20170127134628&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-asea" value="https://vignette.wikia.nocookie.net/gta/images/5/58/Asea-GTAV-front.png/revision/latest?cb=20170127134628&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('asea', 155000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Asterope</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-asterope-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-asterope-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$70.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/e/ec/Asterope-GTAV-front.png/revision/latest?cb=20161018175632" width="200px" height="100px" />
+                    <input class="imageUrl-asterope" value="https://vignette.wikia.nocookie.net/gtawiki/images/e/ec/Asterope-GTAV-front.png/revision/latest?cb=20161018175632" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('asterope', 70000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Autarch</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-autarch-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-autarch-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$860.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/6c/Autarch-GTAO-front.png/revision/latest?cb=20190106193205" width="200px" height="100px" />
+                    <input class="imageUrl-autarch" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/6c/Autarch-GTAO-front.png/revision/latest?cb=20190106193205" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('autarch', 860000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Baller</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-baller-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-baller-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$250.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/3/38/GallivanterBaller1stGen-GTAV-Front.png/revision/latest?cb=20150718200208&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-baller" value="https://vignette.wikia.nocookie.net/gta/images/3/38/GallivanterBaller1stGen-GTAV-Front.png/revision/latest?cb=20150718200208&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('baller', 250000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Baller2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-baller2-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-baller2-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$260.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/7/71/BallerLE-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619165422&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-baller2" value="https://vignette.wikia.nocookie.net/gta/images/7/71/BallerLE-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619165422&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('baller2', 260000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Baller3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-baller3-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-baller3-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$275.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/7/71/BallerLE-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619165422&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-baller3" value="https://vignette.wikia.nocookie.net/gta/images/7/71/BallerLE-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619165422&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('baller3', 275000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Baller4</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-baller4-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-baller4-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$285.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/3/3c/BallerLELWB-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619184359&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-baller4" value="https://vignette.wikia.nocookie.net/gta/images/3/3c/BallerLELWB-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619184359&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('baller4', 285000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Baller5</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-baller5-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-baller5-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$370.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/3/3c/BallerLELWB-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619184359&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-baller5" value="https://vignette.wikia.nocookie.net/gta/images/3/3c/BallerLELWB-GTAO-front.png/revision/latest/scale-to-width-down/340?cb=20170619184359&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('baller5', 370000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Baller6</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-baller6-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-baller6-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$1.500.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/6/6c/BallerLEArmored-GTAO-front.png/revision/latest?cb=20170619165646&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-baller6" value="https://vignette.wikia.nocookie.net/gta/images/6/6c/BallerLEArmored-GTAO-front.png/revision/latest?cb=20170619165646&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('baller6', 1500000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Banshee</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-banshee-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-banshee-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$400.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/82/Banshee-GTAV-front.png/revision/latest?cb=20170609152920&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-banshee" value="https://vignette.wikia.nocookie.net/gta/images/8/82/Banshee-GTAV-front.png/revision/latest?cb=20170609152920&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('banshee', 400000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Banshee2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-banshee2-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-banshee2-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$470.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/e/e2/Banshee900RTopless-GTAO-front.png/revision/latest?cb=20200624083528" width="200px" height="100px" />
+                    <input class="imageUrl-banshee2" value="https://vignette.wikia.nocookie.net/gtawiki/images/e/e2/Banshee900RTopless-GTAO-front.png/revision/latest?cb=20200624083528" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('banshee2', 470000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: BestiaGts</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bestiagts-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-bestiagts-trunk" value="60" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$490.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/a/a5/BestiaGTS-GTAO-front.png/revision/latest?cb=20170609153001&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-bestiagts" value="https://vignette.wikia.nocookie.net/gta/images/a/a5/BestiaGTS-GTAO-front.png/revision/latest?cb=20170609153001&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bestiagts', 490000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: BfInjection</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bfinjection-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-bfinjection-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$180.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/80/Injection-GTAV-front.png/revision/latest?cb=20180131205842&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-bfinjection" value="https://vignette.wikia.nocookie.net/gta/images/8/80/Injection-GTAV-front.png/revision/latest?cb=20180131205842&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bfinjection', 180000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bifta</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bifta-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-bifta-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$290.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/0/07/Bifta-GTAV-front.png/revision/latest?cb=20180301134356&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-bifta" value="https://vignette.wikia.nocookie.net/gta/images/0/07/Bifta-GTAV-front.png/revision/latest?cb=20180301134356&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bifta', 290000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bison</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bison-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-bison-trunk" value="70" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$320.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/6/69/Bison-GTAV-front.png/revision/latest?cb=20190104174857&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-bison" value="https://vignette.wikia.nocookie.net/gta/images/6/69/Bison-GTAV-front.png/revision/latest?cb=20190104174857&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bison', 320000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bison2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bison2-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-bison2-trunk" value="70" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$270.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/2/24/Bison2-GTAV-front.png/revision/latest?cb=20161018175636" width="200px" height="100px" />
+                    <input class="imageUrl-bison2" value="https://vignette.wikia.nocookie.net/gtawiki/images/2/24/Bison2-GTAV-front.png/revision/latest?cb=20161018175636" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bison2', 270000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bjxl</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bjxl-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-bjxl-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$210.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/2/24/Bison2-GTAV-front.png/revision/latest?cb=20161018175636" width="200px" height="100px" />
+                    <input class="imageUrl-bjxl" value="https://vignette.wikia.nocookie.net/gtawiki/images/2/24/Bison2-GTAV-front.png/revision/latest?cb=20161018175636" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bjxl', 210000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Blade</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-blade-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-blade-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$210.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/2/24/Bison2-GTAV-front.png/revision/latest?cb=20161018175636" width="200px" height="100px" />
+                    <input class="imageUrl-blade" value="https://vignette.wikia.nocookie.net/gtawiki/images/2/24/Bison2-GTAV-front.png/revision/latest?cb=20161018175636" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('blade', 210000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Blista</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-blista-stock" value="10" /> 
+                        <input id="trunk" class="vehicle-blista-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$70.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Blista-GTAV-front.png/revision/latest?cb=20160409171328" width="200px" height="100px" />
+                    <input class="imageUrl-blista" value="https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Blista-GTAV-front.png/revision/latest?cb=20160409171328" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('blista', 70000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Blista2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-blista2-stock" value="100" />
+                        <input id="trunk" class="vehicle-blista2-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$155.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/06/BlistaCompact-GTAV-front.png/revision/latest?cb=20160929162026" width="200px" height="100px" />
+                    <input class="imageUrl-blista2" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/06/BlistaCompact-GTAV-front.png/revision/latest?cb=20160929162026" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('blista2', 155000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Blista3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-blista3-stock" value="10" />
+                        <input id="trunk" class="vehicle-blista3-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$180.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/7/76/GoGoMonkeyBlista-GTAV-front.png/revision/latest?cb=20170609153203&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-blista3" value="https://vignette.wikia.nocookie.net/gta/images/7/76/GoGoMonkeyBlista-GTAV-front.png/revision/latest?cb=20170609153203&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('blista3', 180000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bobcatxl</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bobcatxl-stock" value="10" />
+                        <input id="trunk" class="vehicle-bobcatxl-trunk" value="100" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$180.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/3/37/BobcatXL-GTAV-front.png/revision/latest?cb=20190104181232&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-bobcatxl" value="https://vignette.wikia.nocookie.net/gta/images/3/37/BobcatXL-GTAV-front.png/revision/latest?cb=20190104181232&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bobcatxl', 180000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bodhi2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bodhi2-stock" value="10" />
+                        <input id="trunk" class="vehicle-bodhi2-trunk" value="90" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$250.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/8/8f/Bodhi-GTAV-front.png/revision/latest?cb=20161018175819" width="200px" height="100px" />
+                    <input class="imageUrl-bodhi2" value="https://vignette.wikia.nocookie.net/gtawiki/images/8/8f/Bodhi-GTAV-front.png/revision/latest?cb=20161018175819" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bodhi2', 250000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Brawler</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-brawler-stock" value="10" />
+                        <input id="trunk" class="vehicle-brawler-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$350.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/6c/Brawler-GTAV-front.png/revision/latest?cb=20160929162450" width="200px" height="100px" />
+                    <input class="imageUrl-brawler" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/6c/Brawler-GTAV-front.png/revision/latest?cb=20160929162450" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('brawler', 350000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Brioso</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-brioso-stock" value="10" />
+                        <input id="trunk" class="vehicle-brioso-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$40.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/80/BriosoRA-GTAO-front.png/revision/latest?cb=20170616180116&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-brioso" value="https://vignette.wikia.nocookie.net/gta/images/8/80/BriosoRA-GTAO-front.png/revision/latest?cb=20170616180116&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('brioso', 40000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Btype2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-btype2-stock" value="10" />
+                        <input id="trunk" class="vehicle-btype2-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$560.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/63/Fr%C3%A4nkenStange-GTAV-front.png/revision/latest?cb=20191111175139" width="200px" height="100px" />
+                    <input class="imageUrl-btype2" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/63/Fr%C3%A4nkenStange-GTAV-front.png/revision/latest?cb=20191111175139" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('btype2', 560000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Btype3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-btype3-stock" value="10" />
+                        <input id="trunk" class="vehicle-btype3-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$490.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/2/2a/RooseveltValor-GTAO-front.png/revision/latest?cb=20160214204109" width="200px" height="100px" />
+                    <input class="imageUrl-btype3" value="https://vignette.wikia.nocookie.net/gtawiki/images/2/2a/RooseveltValor-GTAO-front.png/revision/latest?cb=20160214204109" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('btype3', 490000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Buccaneer</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-buccaneer-stock" value="10" />
+                        <input id="trunk" class="vehicle-buccaneer-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$230.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/7/71/Buccaneer-GTAV-front2.png/revision/latest?cb=20180305145543&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-buccaneer" value="https://vignette.wikia.nocookie.net/gta/images/7/71/Buccaneer-GTAV-front2.png/revision/latest?cb=20180305145543&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('buccaneer', 230000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Buccaneer2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-buccaneer2-stock" value="10" />
+                        <input id="trunk" class="vehicle-buccaneer2-trunk" value="60" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$360.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/a/a2/BuccaneerCustom-GTAO-front.png/revision/latest?cb=20180223165613&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-buccaneer2" value="https://vignette.wikia.nocookie.net/gta/images/a/a2/BuccaneerCustom-GTAO-front.png/revision/latest?cb=20180223165613&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('buccaneer2', 360000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Buffalo</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-buffalo-stock" value="10" />
+                        <input id="trunk" class="vehicle-buffalo-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$400.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/a/ac/Buffalo-GTAV-Front-FirstGeneration.png/revision/latest?cb=20181113193301&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-buffalo" value="https://vignette.wikia.nocookie.net/gta/images/a/ac/Buffalo-GTAV-Front-FirstGeneration.png/revision/latest?cb=20181113193301&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('buffalo', 400000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Buffalo2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-buffalo2-stock" value="10" />
+                        <input id="trunk" class="vehicle-buffalo2-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$400.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/e/e1/BuffaloS-GTAV-front.png/revision/latest?cb=20170609171640&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-buffalo2" value="https://vignette.wikia.nocookie.net/gta/images/e/e1/BuffaloS-GTAV-front.png/revision/latest?cb=20170609171640&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('buffalo2', 400000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Buffalo3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-buffalo3-stock" value="10" />
+                        <input id="trunk" class="vehicle-buffalo3-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$400.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/3/34/SprunkBuffalo-GTAVPC-front.png/revision/latest?cb=20150529175841" width="200px" height="100px" />
+                    <input class="imageUrl-buffalo3" value="https://vignette.wikia.nocookie.net/gtawiki/images/3/34/SprunkBuffalo-GTAVPC-front.png/revision/latest?cb=20150529175841" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('buffalo3', 400000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bullet</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bullet-stock" value="10" />
+                        <input id="trunk" class="vehicle-bullet-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$500.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/3/3d/Bullet-GTAV-front.png/revision/latest?cb=20180331183434" width="200px" height="100px" />
+                    <input class="imageUrl-bullet" value="https://vignette.wikia.nocookie.net/gtawiki/images/3/3d/Bullet-GTAV-front.png/revision/latest?cb=20180331183434" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bullet', 500000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Bullet</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bullet-stock" value="10" />
+                        <input id="trunk" class="vehicle-bullet-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$500.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/3/3d/Bullet-GTAV-front.png/revision/latest?cb=20180331183434" width="200px" height="100px" />
+                    <input class="imageUrl-bullet" value="https://vignette.wikia.nocookie.net/gtawiki/images/3/3d/Bullet-GTAV-front.png/revision/latest?cb=20180331183434" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bullet', 500000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Burrito</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-burrito-stock" value="10" />
+                        <input id="trunk" class="vehicle-burrito-trunk" value="120" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$360.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/80/Burrito3-GTAV-front.png/revision/latest?cb=20181105180909&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-burrito" value="https://vignette.wikia.nocookie.net/gta/images/8/80/Burrito3-GTAV-front.png/revision/latest?cb=20181105180909&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('burrito', 360000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Burrito2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-burrito2-stock" value="10" />
+                        <input id="trunk" class="vehicle-burrito2-trunk" value="120" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$360.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/00/Burrito2-GTAV-front.png/revision/latest?cb=20160929164142" width="200px" height="100px" />
+                    <input class="imageUrl-burrito2" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/00/Burrito2-GTAV-front.png/revision/latest?cb=20160929164142" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('burrito2', 360000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Burrito4</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-burrito4-stock" value="10" />
+                        <input id="trunk" class="vehicle-burrito4-trunk" value="120" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$360.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/3/33/LSWPBurrito-GTAV-front.png/revision/latest?cb=20160929164147" width="200px" height="100px" />
+                    <input class="imageUrl-burrito4" value="https://vignette.wikia.nocookie.net/gtawiki/images/3/33/LSWPBurrito-GTAV-front.png/revision/latest?cb=20160929164147" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('burrito4', 360000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Carbonizzare</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-carbonizzare-stock" value="10" />
+                        <input id="trunk" class="vehicle-carbonizzare-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$360.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/7/7b/CarbonizzareDown-GTAV-front.png/revision/latest?cb=20160917231442" width="200px" height="100px" />
+                    <input class="imageUrl-carbonizzare" value="https://vignette.wikia.nocookie.net/gtawiki/images/7/7b/CarbonizzareDown-GTAV-front.png/revision/latest?cb=20160917231442" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('carbonizzare', 360000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Casco</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-casco-stock" value="10" />
+                        <input id="trunk" class="vehicle-casco-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$455.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/86/Casco-GTAO-front.png/revision/latest?cb=20180215173421&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-casco" value="https://vignette.wikia.nocookie.net/gta/images/8/86/Casco-GTAO-front.png/revision/latest?cb=20180215173421&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('casco', 455000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cavalcade</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cavalcade-stock" value="10" />
+                        <input id="trunk" class="vehicle-cavalcade-trunk" value="60" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$210.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/c/c5/Cavalcade-GTAV-front.png/revision/latest/scale-to-width-down/340?cb=20170619185830&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cavalcade" value="https://vignette.wikia.nocookie.net/gta/images/c/c5/Cavalcade-GTAV-front.png/revision/latest/scale-to-width-down/340?cb=20170619185830&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cavalcade', 210000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cavalcade2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cavalcade2-stock" value="10" />
+                        <input id="trunk" class="vehicle-cavalcade2-trunk" value="60" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$230.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/0/08/Cavalcade2-GTAV-front.png/revision/latest?cb=20170619192609&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cavalcade2" value="https://vignette.wikia.nocookie.net/gta/images/0/08/Cavalcade2-GTAV-front.png/revision/latest?cb=20170619192609&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cavalcade2', 230000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cheburek</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cheburek-stock" value="10" />
+                        <input id="trunk" class="vehicle-cheburek-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$180.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/8e/Cheburek-GTAO-front.png/revision/latest?cb=20180816125626&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cheburek" value="https://vignette.wikia.nocookie.net/gta/images/8/8e/Cheburek-GTAO-front.png/revision/latest?cb=20180816125626&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cheburek', 180000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cheetah</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cheetah-stock" value="10" />
+                        <input id="trunk" class="vehicle-cheetah-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$525.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/1/1e/Cheetah-GTAV-Front.png/revision/latest?cb=20181109174822&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cheetah" value="https://vignette.wikia.nocookie.net/gta/images/1/1e/Cheetah-GTAV-Front.png/revision/latest?cb=20181109174822&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cheetah', 525000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cheetah2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cheetah2-stock" value="10" />
+                        <input id="trunk" class="vehicle-cheetah2-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$340.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/3/38/CheetahClassic-GTAO-front.png/revision/latest?cb=20170614143349" width="200px" height="100px" />
+                    <input class="imageUrl-cheetah2" value="https://vignette.wikia.nocookie.net/gtawiki/images/3/38/CheetahClassic-GTAO-front.png/revision/latest?cb=20170614143349" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cheetah2', 340000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Chino</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-chino-stock" value="10" />
+                        <input id="trunk" class="vehicle-chino-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$230.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/1/17/Chino-GTAV-front.png/revision/latest?cb=20190814130834" width="200px" height="100px" />
+                    <input class="imageUrl-chino" value="https://vignette.wikia.nocookie.net/gtawiki/images/1/17/Chino-GTAV-front.png/revision/latest?cb=20190814130834" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('chino', 230000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Clique</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-clique-stock" value="10" />
+                        <input id="trunk" class="vehicle-clique-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$460.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/c/c6/Clique-GTAO-front.png/revision/latest?cb=20181214181626" width="200px" height="100px" />
+                    <input class="imageUrl-clique" value="https://vignette.wikia.nocookie.net/gtawiki/images/c/c6/Clique-GTAO-front.png/revision/latest?cb=20181214181626" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('clique', 460000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cognoscenti 55</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cog552-stock" value="10" />
+                        <input id="trunk" class="vehicle-cog552-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$1.000.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/b/b0/Cognoscenti55Armored-GTAO-front.png/revision/latest?cb=20160117195143" width="200px" height="100px" />
+                    <input class="imageUrl-cog552" value="https://vignette.wikia.nocookie.net/gtawiki/images/b/b0/Cognoscenti55Armored-GTAO-front.png/revision/latest?cb=20160117195143" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cog552', 1000000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cognoscenti Cabrio</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cogcabrio-stock" value="10" />
+                        <input id="trunk" class="vehicle-cogcabrio-trunk" value="60" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$230.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/2/28/CognoscentiCabrioUp-GTAV-front.png/revision/latest?cb=20170614164028&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cogcabrio" value="https://vignette.wikia.nocookie.net/gta/images/2/28/CognoscentiCabrioUp-GTAV-front.png/revision/latest?cb=20170614164028&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cogcabrio', 230000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cognoscenti</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cognoscenti-stock" value="10" />
+                        <input id="trunk" class="vehicle-cognoscenti-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$380.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/f/ff/Cognoscenti-GTAO-front.png/revision/latest?cb=20180305133723&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cognoscenti" value="https://vignette.wikia.nocookie.net/gta/images/f/ff/Cognoscenti-GTAO-front.png/revision/latest?cb=20180305133723&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cognoscenti', 380000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cognoscenti2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cognoscenti2-stock" value="10" />
+                        <input id="trunk" class="vehicle-cognoscenti2-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$1.500.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/3/30/CognoscentiArmored-GTAO-front.png/revision/latest?cb=20181206185816&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-cognoscenti2" value="https://vignette.wikia.nocookie.net/gta/images/3/30/CognoscentiArmored-GTAO-front.png/revision/latest?cb=20181206185816&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cognoscenti2', 1500000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Comet2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-comet2-stock" value="10" />
+                        <input id="trunk" class="vehicle-comet2-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$350.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/d/d2/Comet-GTAV-front.png/revision/latest?cb=20200415210743&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-comet2" value="https://vignette.wikia.nocookie.net/gta/images/d/d2/Comet-GTAV-front.png/revision/latest?cb=20200415210743&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('comet2', 350000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Comet3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-comet3-stock" value="10" />
+                        <input id="trunk" class="vehicle-comet3-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$390.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/a/a0/CometRetroCustom-GTAO-front.png/revision/latest?cb=20161213201950" width="200px" height="100px" />
+                    <input class="imageUrl-comet3" value="https://vignette.wikia.nocookie.net/gtawiki/images/a/a0/CometRetroCustom-GTAO-front.png/revision/latest?cb=20161213201950" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('comet3', 390000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Comet5</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-comet5-stock" value="10" />
+                        <input id="trunk" class="vehicle-comet5-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$400.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/0/0f/CometSR-GTAO-front.png/revision/latest?cb=20180420151839&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-comet5" value="https://vignette.wikia.nocookie.net/gta/images/0/0f/CometSR-GTAO-front.png/revision/latest?cb=20180420151839&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('comet5', 400000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Coquette</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-coquette-stock" value="10" />
+                        <input id="trunk" class="vehicle-coquette-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$350.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/08/Coquette-GTAV-front.png/revision/latest?cb=20190818142055" width="200px" height="100px" />
+                    <input class="imageUrl-coquette" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/08/Coquette-GTAV-front.png/revision/latest?cb=20190818142055" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('coquette', 350000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Coquette2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-coquette2-stock" value="10" />
+                        <input id="trunk" class="vehicle-coquette2-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$385.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/0b/CoquetteClassic-GTAV-front.png/revision/latest?cb=20160117175931" width="200px" height="100px" />
+                    <input class="imageUrl-coquette2" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/0b/CoquetteClassic-GTAV-front.png/revision/latest?cb=20160117175931" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('coquette2', 385000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Coquette3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-coquette3-stock" value="10" />
+                        <input id="trunk" class="vehicle-coquette3-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$295.000,00</h3>
+                    <img src="https://i.pinimg.com/originals/dd/c8/ba/ddc8bacb70e469bcfbdf517c4f64f4d5.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-coquette3" value="https://i.pinimg.com/originals/dd/c8/ba/ddc8bacb70e469bcfbdf517c4f64f4d5.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('coquette3', 295000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Cyclone</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cyclone-stock" value="3" />
+                        <input id="trunk" class="vehicle-cyclone-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$1.200.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/super/main/cyclone.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-cyclone" value="https://www.gtabase.com/images/gta-5/vehicles/super/main/cyclone.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cyclone', 1200000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Deveste</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-deveste-stock" value="2" />
+                        <input id="trunk" class="vehicle-deveste-trunk" value="20" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$990.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/7/7b/Deveste-GTAO-front.png/revision/latest?cb=20190123153754" width="200px" height="100px" />
+                    <input class="imageUrl-deveste" value="https://vignette.wikia.nocookie.net/gtawiki/images/7/7b/Deveste-GTAO-front.png/revision/latest?cb=20190123153754" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('deveste', 990000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Deviant</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-deviant-stock" value="2" />
+                        <input id="trunk" class="vehicle-deviant-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$470.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/01/Deviant-GTAO-front.png/revision/latest?cb=20181214181627" width="200px" height="100px" />
+                    <input class="imageUrl-deviant" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/01/Deviant-GTAO-front.png/revision/latest?cb=20181214181627" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('deviant', 470000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dilettante</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dilettante-stock" value="50" />
+                        <input id="trunk" class="vehicle-dilettante-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$70.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/01/Deviant-GTAO-front.png/revision/latest?cb=20181214181627" width="200px" height="100px" />
+                    <input class="imageUrl-dilettante" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/01/Deviant-GTAO-front.png/revision/latest?cb=20181214181627" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dilettante', 70000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dloader</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dloader-stock" value="6" />
+                        <input id="trunk" class="vehicle-dloader-trunk" value="80" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$250.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/95/Duneloader-GTAV-FrontQuarter.png/revision/latest?cb=20180505105049" width="200px" height="100px" />
+                    <input class="imageUrl-dloader" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/95/Duneloader-GTAV-FrontQuarter.png/revision/latest?cb=20180505105049" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dloader', 250000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dominator</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dominator-stock" value="6" />
+                        <input id="trunk" class="vehicle-dominator-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$330.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/7/78/Dominator-GTAV-front.png/revision/latest?cb=20181126201850&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-dominator" value="https://vignette.wikia.nocookie.net/gta/images/7/78/Dominator-GTAV-front.png/revision/latest?cb=20181126201850&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dominator', 330000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dominator2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dominator2-stock" value="6" />
+                        <input id="trunk" class="vehicle-dominator2-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$330.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/c/cf/PisswasserDominator-GTAVPC-front.png/revision/latest?cb=20150529175704" width="200px" height="100px" />
+                    <input class="imageUrl-dominator2" value="https://vignette.wikia.nocookie.net/gtawiki/images/c/cf/PisswasserDominator-GTAVPC-front.png/revision/latest?cb=20150529175704" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dominator2', 330000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dominator3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dominator3-stock" value="6" />
+                        <input id="trunk" class="vehicle-dominator3-trunk" value="50" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$470.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/8/8b/DominatorGTX-GTAO-front.png/revision/latest?cb=20180328210557" width="200px" height="100px" />
+                    <input class="imageUrl-dominator3" value="https://vignette.wikia.nocookie.net/gtawiki/images/8/8b/DominatorGTX-GTAO-front.png/revision/latest?cb=20180328210557" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dominator3', 470000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dubsta</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dubsta-stock" value="6" />
+                        <input id="trunk" class="vehicle-dubsta-trunk" value="70" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$210.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20170201142452&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-dubsta" value="https://vignette.wikia.nocookie.net/gta/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20170201142452&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dubsta', 210000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dubsta2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dubsta2-stock" value="6" />
+                        <input id="trunk" class="vehicle-dubsta2-trunk" value="70" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$340.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/suvs/main/dubsta-2.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-dubsta2" value="https://www.gtabase.com/images/gta-5/vehicles/suvs/main/dubsta-2.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dubsta2', 340000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dubsta3</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dubsta3-stock" value="6" />
+                        <input id="trunk" class="vehicle-dubsta3-trunk" value="90" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$430.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/1/10/Dubsta6x6-GTAV-front.png/revision/latest?cb=20170201142349&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-dubsta3" value="https://vignette.wikia.nocookie.net/gta/images/1/10/Dubsta6x6-GTAV-front.png/revision/latest?cb=20170201142349&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dubsta3', 430000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Dukes</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-dukes-stock" value="6" />
+                        <input id="trunk" class="vehicle-dukes-trunk" value="40" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$250.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/5/53/Dukes-GTAV-front.png/revision/latest?cb=20181127181504&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-dukes" value="https://vignette.wikia.nocookie.net/gta/images/5/53/Dukes-GTAV-front.png/revision/latest?cb=20181127181504&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('dukes', 250000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Elegy</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-elegy-stock" value="6" />
+                        <input id="trunk" class="vehicle-elegy-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$450.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/68/ElegyRetroCustom-GTAO-front.png/revision/latest?cb=20161213202302" width="200px" height="100px" />
+                    <input class="imageUrl-elegy" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/68/ElegyRetroCustom-GTAO-front.png/revision/latest?cb=20161213202302" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('elegy', 450000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="carros">
+                    <h2>Nome: Elegy2</h2>
+                    <div style="margin-left: 5rem; width: 100%;"><span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-elegy2-stock" value="6" />
+                        <input id="trunk" class="vehicle-elegy2-trunk" value="30" style="display: none;" />
+                    </div>
+                    
+                    <h3>Preço: R$455.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/b/b0/ElegyRH8.png/revision/latest?cb=20170307175344&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-elegy2" value="https://vignette.wikia.nocookie.net/gta/images/b/b0/ElegyRH8.png/revision/latest?cb=20170307175344&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('elegy2', 455000)" >Comprar</button>
+                </div>
+
+
+                <!-- IMPORTADOS -->
+                <div class="product" id="importados">
+                    <h2>Nome: BMW M3 F80</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bmwm3f80-stock" value="10" />
+                        <input id="trunk" class="vehicle-bmwm3f80-trunk" value="30" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.750.000,00</h3>
+                    <img src="https://i.imgur.com/JmkQBx3.png" width="200px" height="100px" />
+                    <input class="imageUrl-bmwm3f80" value="https://i.imgur.com/JmkQBx3.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bmwm3f80', 1750000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="importados">
+                    <h2>Nome: Ford Mustang</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-fordmustang-stock" value="10" />
+                        <input id="trunk" class="vehicle-fordmustang-trunk" value="30" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.800.000,00</h3>
+                    <img src="https://i.imgur.com/iN7wB3a.png" width="200px" height="100px" />
+                    <input class="imageUrl-fordmustang" value="https://i.imgur.com/iN7wB3a.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('fordmustang', 1800000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="importados">
+                    <h2>Nome: Mazda rx7</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-mazdarx7-stock" value="10" />
+                        <input id="trunk" class="vehicle-mazdarx7-trunk" value="30" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.650.000,00</h3>
+                    <img src="https://i.imgur.com/AoXGhPN.png" width="200px" height="100px" />
+                    <input class="imageUrl-mazdarx7" value="https://i.imgur.com/AoXGhPN.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('mazdarx7', 1650000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="importados">
+                    <h2>Nome: Tesla Prior</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-teslaprior-stock" value="10" />
+                        <input id="trunk" class="vehicle-teslaprior-trunk" value="30" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.900.000,00</h3>
+                    <img src="https://i.imgur.com/IIt6BWH.png" width="200px" height="100px" />
+                    <input class="imageUrl-teslaprior" value="https://i.imgur.com/IIt6BWH.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('teslaprior', 1650000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="importados">
+                    <h2>Nome: Toyota Supra</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-toyotasupra-stock" value="10" />
+                        <input id="trunk" class="vehicle-toyotasupra-trunk" value="30" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.400.000,00</h3>
+                    <img src="https://i.imgur.com/It1lbdu.png" width="200px" height="100px" />
+                    <input class="imageUrl-toyotasupra" value="https://i.imgur.com/It1lbdu.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('toyotasupra', 1400000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="importados">
+                    <h2>Nome: BMW M4</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-440i-stock" value="10" />
+                        <input id="trunk" class="vehicle-440i-trunk" value="30" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.440.000,00</h3>
+                    <img src="https://i.imgur.com/JG2EbeI.png" width="200px" height="100px" />
+                    <input class="imageUrl-440i" value="https://i.imgur.com/JG2EbeI.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('440i', 1440000)" >Comprar</button>
+                </div>
+
+                <!-- MOTOS -->
+                <div class="product" id="motos">
+                    <h2>Nome: Akuma</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-akuma-stock" value="10" />
+                        <input id="trunk" class="vehicle-akuma-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$2.200.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/9a/Akuma-GTAV-front.png/revision/latest?cb=20160127214020" width="200px" height="100px" />
+                    <input class="imageUrl-akuma" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/9a/Akuma-GTAV-front.png/revision/latest?cb=20160127214020" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('akuma', 2200000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Avarus</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-avarus-stock" value="10" />
+                        <input id="trunk" class="vehicle-avarus-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$540.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/1/1a/Avarus-GTAO-front.png/revision/latest?cb=20161014164948" width="200px" height="100px" />
+                    <input class="imageUrl-avarus" value="https://vignette.wikia.nocookie.net/gtawiki/images/1/1a/Avarus-GTAO-front.png/revision/latest?cb=20161014164948" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('avarus', 540000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Bagger</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bagger-stock" value="10" />
+                        <input id="trunk" class="vehicle-bagger-trunk" value="40" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$500.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/1/10/Bagger-GTAV-front.png/revision/latest?cb=20170620125111&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-bagger" value="https://vignette.wikia.nocookie.net/gta/images/1/10/Bagger-GTAV-front.png/revision/latest?cb=20170620125111&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bagger', 500000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Bati</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bati-stock" value="10" />
+                        <input id="trunk" class="vehicle-bati-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$790.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/d/d9/Bati801-GTAV-front.png/revision/latest?cb=20160127211358" width="200px" height="100px" />
+                    <input class="imageUrl-bati" value="https://vignette.wikia.nocookie.net/gtawiki/images/d/d9/Bati801-GTAV-front.png/revision/latest?cb=20160127211358" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bati', 790000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Bati2</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bati2-stock" value="10" />
+                        <input id="trunk" class="vehicle-bati2-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$790.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/e/e3/Bati801RR-GTAV-front-Sprunk.png/revision/latest/scale-to-width-down/340?cb=20160214210359" width="200px" height="100px" />
+                    <input class="imageUrl-bati2" value="https://vignette.wikia.nocookie.net/gtawiki/images/e/e3/Bati801RR-GTAV-front-Sprunk.png/revision/latest/scale-to-width-down/340?cb=20160214210359" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bati2', 790000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Bf400</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-bf400-stock" value="10" />
+                        <input id="trunk" class="vehicle-bf400-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$900.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/00/BF400-GTAO-front.png/revision/latest?cb=20161014164436" width="200px" height="100px" />
+                    <input class="imageUrl-bf400" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/00/BF400-GTAO-front.png/revision/latest?cb=20161014164436" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('bf400', 900000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Blazer</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-blazer-stock" value="10" />
+                        <input id="trunk" class="vehicle-blazer-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$330.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/3/35/Blazer-GTAV-front.png/revision/latest?cb=20161018175627" width="200px" height="100px" />
+                    <input class="imageUrl-blazer" value="https://vignette.wikia.nocookie.net/gtawiki/images/3/35/Blazer-GTAV-front.png/revision/latest?cb=20161018175627" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('blazer', 330000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Blazer4</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-blazer4-stock" value="10" />
+                        <input id="trunk" class="vehicle-blazer4-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$470.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/6e/StreetBlazer-GTAO-front.png/revision/latest?cb=20161004180649" width="200px" height="100px" />
+                    <input class="imageUrl-blazer4" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/6e/StreetBlazer-GTAO-front.png/revision/latest?cb=20161004180649" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('blazer4', 470000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Carbonrs</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-carbonrs-stock" value="10" />
+                        <input id="trunk" class="vehicle-carbonrs-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$510.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/f/f5/CarbonRS-GTAV-FrontQuarter.png/revision/latest?cb=20161015115507" width="200px" height="100px" />
+                    <input class="imageUrl-carbonrs" value="https://vignette.wikia.nocookie.net/gtawiki/images/f/f5/CarbonRS-GTAV-FrontQuarter.png/revision/latest?cb=20161015115507" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('carbonrs', 510000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Chimera</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-chimera-stock" value="10" />
+                        <input id="trunk" class="vehicle-chimera-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$545.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/8/8a/Chimera-GTAO-front.png/revision/latest?cb=20161014164901" width="200px" height="100px" />
+                    <input class="imageUrl-chimera" value="https://vignette.wikia.nocookie.net/gtawiki/images/8/8a/Chimera-GTAO-front.png/revision/latest?cb=20161014164901" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('chimera', 545000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Cliffhanger</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cliffhanger-stock" value="10" />
+                        <input id="trunk" class="vehicle-cliffhanger-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$510.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/7/78/Cliffhanger-GTAO-front.png/revision/latest?cb=20161014164545" width="200px" height="100px" />
+                    <input class="imageUrl-cliffhanger" value="https://vignette.wikia.nocookie.net/gtawiki/images/7/78/Cliffhanger-GTAO-front.png/revision/latest?cb=20161014164545" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cliffhanger', 510000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Daemon2</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-daemon2-stock" value="10" />
+                        <input id="trunk" class="vehicle-daemon2-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$340.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/6b/Daemon2-GTAO-front.png/revision/latest?cb=20161014164637" width="200px" height="100px" />
+                    <input class="imageUrl-daemon2" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/6b/Daemon2-GTAO-front.png/revision/latest?cb=20161014164637" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('daemon2', 340000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Defiler</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-defiler-stock" value="10" />
+                        <input id="trunk" class="vehicle-defiler-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$560.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/f/f5/Defiler-GTAO-front.png/revision/latest?cb=20161014165056" width="200px" height="100px" />
+                    <input class="imageUrl-defiler" value="https://vignette.wikia.nocookie.net/gtawiki/images/f/f5/Defiler-GTAO-front.png/revision/latest?cb=20161014165056" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('defiler', 560000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Diabolus</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-diablous-stock" value="10" />
+                        <input id="trunk" class="vehicle-diablous-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$530.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/4/47/Diabolus-GTAO-front.png/revision/latest?cb=20170620130156&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-diablous" value="https://vignette.wikia.nocookie.net/gta/images/4/47/Diabolus-GTAO-front.png/revision/latest?cb=20170620130156&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('diablous', 530000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Diabolus2</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-diablous2-stock" value="10" />
+                        <input id="trunk" class="vehicle-diablous2-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$560.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/1/11/DiabolusCustom-GTAO-front.png/revision/latest?cb=20161213202213" width="200px" height="100px" />
+                    <input class="imageUrl-diablous2" value="https://vignette.wikia.nocookie.net/gtawiki/images/1/11/DiabolusCustom-GTAO-front.png/revision/latest?cb=20161213202213" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('diablous2', 560000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Double T</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-double-stock" value="10" />
+                        <input id="trunk" class="vehicle-double-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.460.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/8c/DoubleT-GTAV-front.png/revision/latest?cb=20170620130157&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-double" value="https://vignette.wikia.nocookie.net/gta/images/8/8c/DoubleT-GTAV-front.png/revision/latest?cb=20170620130157&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('double', 1460000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Double T</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-double-stock" value="10" />
+                        <input id="trunk" class="vehicle-double-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.460.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/8/8c/DoubleT-GTAV-front.png/revision/latest?cb=20170620130157&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-double" value="https://vignette.wikia.nocookie.net/gta/images/8/8c/DoubleT-GTAV-front.png/revision/latest?cb=20170620130157&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('double', 1460000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Enduro</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-enduro-stock" value="10" />
+                        <input id="trunk" class="vehicle-enduro-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$120.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/e/ef/Enduro-GTAO-front.png/revision/latest?cb=20160302173841" width="200px" height="100px" />
+                    <input class="imageUrl-enduro" value="https://vignette.wikia.nocookie.net/gtawiki/images/e/ef/Enduro-GTAO-front.png/revision/latest?cb=20160302173841" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('enduro', 120000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Esskey</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-esskey-stock" value="10" />
+                        <input id="trunk" class="vehicle-esskey-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$420.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/4/4e/Esskey-GTAO-front.png/revision/latest?cb=20161014165149" width="200px" height="100px" />
+                    <input class="imageUrl-esskey" value="https://vignette.wikia.nocookie.net/gtawiki/images/4/4e/Esskey-GTAO-front.png/revision/latest?cb=20161014165149" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('esskey', 420000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Faggio</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-faggio-stock" value="10" />
+                        <input id="trunk" class="vehicle-faggio-trunk" value="20" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$20.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/91/Faggio-GTAV-front.png/revision/latest?cb=20160204205826" width="200px" height="100px" />
+                    <input class="imageUrl-faggio" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/91/Faggio-GTAV-front.png/revision/latest?cb=20160204205826" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('faggio', 20000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Faggio</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-faggio-stock" value="90" />
+                        <input id="trunk" class="vehicle-faggio-trunk" value="20" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$20.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/5/50/FaggioSport-GTAO-front.png/revision/latest?cb=20161004182412" width="200px" height="100px" />
+                    <input class="imageUrl-faggio" value="https://vignette.wikia.nocookie.net/gtawiki/images/5/50/FaggioSport-GTAO-front.png/revision/latest?cb=20161004182412" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('faggio', 20000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Faggio2</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-faggio2-stock" value="90" />
+                        <input id="trunk" class="vehicle-faggio2-trunk" value="20" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$20.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/91/Faggio-GTAV-front.png/revision/latest?cb=20160204205826" width="200px" height="100px" />
+                    <input class="imageUrl-faggio2" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/91/Faggio-GTAV-front.png/revision/latest?cb=20160204205826" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('faggio2', 20000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Faggio3</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-faggio3-stock" value="90" />
+                        <input id="trunk" class="vehicle-faggio3-trunk" value="20" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$20.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png/revision/latest?cb=20161004182448" width="200px" height="100px" />
+                    <input class="imageUrl-faggio3" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/07/FaggioMod-GTAO-front.png/revision/latest?cb=20161004182448" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('faggio3', 20000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: FCR</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-fcr-stock" value="10" />
+                        <input id="trunk" class="vehicle-fcr-trunk" value="20" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$490.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/95/FCR1000-GTAO-front.png/revision/latest?cb=20161213202343" width="200px" height="100px" />
+                    <input class="imageUrl-fcr" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/95/FCR1000-GTAO-front.png/revision/latest?cb=20161213202343" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('fcr', 490000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Gargoyle</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-gargoyle-stock" value="10" />
+                        <input id="trunk" class="vehicle-gargoyle-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$550.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/e/ea/Gargoyle-GTAO-front.png/revision/latest?cb=20161014164757" width="200px" height="100px" />
+                    <input class="imageUrl-gargoyle" value="https://vignette.wikia.nocookie.net/gtawiki/images/e/ea/Gargoyle-GTAO-front.png/revision/latest?cb=20161014164757" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('gargoyle', 550000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Hakuchou</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-hakuchou-stock" value="10" />
+                        <input id="trunk" class="vehicle-hakuchou-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.600.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/f/fd/HakuchouDrag-GTAO-front.png/revision/latest?cb=20170620204755&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-hakuchou" value="https://vignette.wikia.nocookie.net/gta/images/f/fd/HakuchouDrag-GTAO-front.png/revision/latest?cb=20170620204755&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('hakuchou', 1600000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Hakuchou2</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-hakuchou2-stock" value="10" />
+                        <input id="trunk" class="vehicle-hakuchou2-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.880.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/0/01/HakuchouDrag-GTAO-front-ClassicFlames.png/revision/latest?cb=20190718211632" width="200px" height="100px" />
+                    <input class="imageUrl-hakuchou2" value="https://vignette.wikia.nocookie.net/gtawiki/images/0/01/HakuchouDrag-GTAO-front-ClassicFlames.png/revision/latest?cb=20190718211632" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('hakuchou2', 1880000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Hexer</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-hexer-stock" value="10" />
+                        <input id="trunk" class="vehicle-hexer-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$350.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/64/Hexer-GTAV-front.png/revision/latest?cb=20160211212015" width="200px" height="100px" />
+                    <input class="imageUrl-hexer" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/64/Hexer-GTAV-front.png/revision/latest?cb=20160211212015" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('hexer', 350000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Innovation</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-innovation-stock" value="10" />
+                        <input id="trunk" class="vehicle-innovation-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$350.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/1/13/Innovation-GTAV-front.png/revision/latest?cb=20160302173556" width="200px" height="100px" />
+                    <input class="imageUrl-innovation" value="https://vignette.wikia.nocookie.net/gtawiki/images/1/13/Innovation-GTAV-front.png/revision/latest?cb=20160302173556" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('innovation', 350000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Lectro</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-lectro-stock" value="10" />
+                        <input id="trunk" class="vehicle-lectro-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$480.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/lectro.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-lectro" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/lectro.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('lectro', 480000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Manchez</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-manchez-stock" value="10" />
+                        <input id="trunk" class="vehicle-manchez-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$455.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/manchez.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-manchez" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/manchez.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('manchez', 455000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Nemesis</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-nemesis-stock" value="10" />
+                        <input id="trunk" class="vehicle-nemesis-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$455.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/nemesis.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-nemesis" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/nemesis.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('nemesis', 455000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: NightBlade</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-nightblade-stock" value="10" />
+                        <input id="trunk" class="vehicle-nightblade-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$515.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/6/6b/Nightblade-GTAO-front.png/revision/latest?cb=20161014165516" width="200px" height="100px" />
+                    <input class="imageUrl-nightblade" value="https://vignette.wikia.nocookie.net/gtawiki/images/6/6b/Nightblade-GTAO-front.png/revision/latest?cb=20161014165516" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('nightblade', 515000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: PCJ</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-pcj-stock" value="10" />
+                        <input id="trunk" class="vehicle-pcj-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$110.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/7/74/PCJ600-GTAV-front.png/revision/latest?cb=20160121201111" width="200px" height="100px" />
+                    <input class="imageUrl-pcj" value="https://vignette.wikia.nocookie.net/gtawiki/images/7/74/PCJ600-GTAV-front.png/revision/latest?cb=20160121201111" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('pcj', 110000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Ruffian</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-ruffian-stock" value="10" />
+                        <input id="trunk" class="vehicle-ruffian-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$445.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/7/70/Ruffian-GTAV-front-variant2.png/revision/latest?cb=20160204203513" width="200px" height="100px" />
+                    <input class="imageUrl-ruffian" value="https://vignette.wikia.nocookie.net/gtawiki/images/7/70/Ruffian-GTAV-front-variant2.png/revision/latest?cb=20160204203513" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('ruffian', 445000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Sanchez</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-sanchez-stock" value="10" />
+                        <input id="trunk" class="vehicle-sanchez-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$430.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/93/Sanchez2-GTAV-front.png/revision/latest?cb=20160222221404" width="200px" height="100px" />
+                    <input class="imageUrl-sanchez" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/93/Sanchez2-GTAV-front.png/revision/latest?cb=20160222221404" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('sanchez', 430000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Sanchez2</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-sanchez2-stock" value="10" />
+                        <input id="trunk" class="vehicle-sanchez2-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$430.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/sanchez.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-sanchez2" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/sanchez.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('sanchez2', 430000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Shotaro</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-shotaro-stock" value="10" />
+                        <input id="trunk" class="vehicle-shotaro-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.500.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/d/df/Shotaro-GTAO-front.png/revision/latest?cb=20161004182220" width="200px" height="100px" />
+                    <input class="imageUrl-shotaro" value="https://vignette.wikia.nocookie.net/gtawiki/images/d/df/Shotaro-GTAO-front.png/revision/latest?cb=20161004182220" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('shotaro', 1500000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Sovereign</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-sovereign-stock" value="10" />
+                        <input id="trunk" class="vehicle-sovereign-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$385.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/sovereign.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-sovereign" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/sovereign.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('sovereign', 385000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Thrust</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-thrust-stock" value="10" />
+                        <input id="trunk" class="vehicle-thrust-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$475.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/4/4e/Thrust-GTAV-front.png/revision/latest?cb=20160917232329" width="200px" height="100px" />
+                    <input class="imageUrl-thrust" value="https://vignette.wikia.nocookie.net/gtawiki/images/4/4e/Thrust-GTAV-front.png/revision/latest?cb=20160917232329" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('thrust', 475000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Vader</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-vader-stock" value="10" />
+                        <input id="trunk" class="vehicle-vader-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$445.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/9/9b/Vader-GTAV-front.png/revision/latest?cb=20160130222000" width="200px" height="100px" />
+                    <input class="imageUrl-vader" value="https://vignette.wikia.nocookie.net/gtawiki/images/9/9b/Vader-GTAV-front.png/revision/latest?cb=20160130222000" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('vader', 445000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Vidcator</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-vidcator-stock" value="10" />
+                        <input id="trunk" class="vehicle-vidcator-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$440.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gta/images/5/5f/Vindicator-GTAV-front.png/revision/latest?cb=20180305200714&path-prefix=pt" width="200px" height="100px" />
+                    <input class="imageUrl-vidcator" value="https://vignette.wikia.nocookie.net/gta/images/5/5f/Vindicator-GTAV-front.png/revision/latest?cb=20180305200714&path-prefix=pt" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('vidcator', 440000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Vortex</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-vortex-stock" value="10" />
+                        <input id="trunk" class="vehicle-vortex-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$1.280.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/7/71/Vortex-GTAO-front.png/revision/latest?cb=20161004181943" width="200px" height="100px" />
+                    <input class="imageUrl-vortex" value="https://vignette.wikia.nocookie.net/gtawiki/images/7/71/Vortex-GTAO-front.png/revision/latest?cb=20161004181943" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('vortex', 1280000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Wolfsbane</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-wolfsbane-stock" value="10" />
+                        <input id="trunk" class="vehicle-wolfsbane-trunk" value="15" style="display: none;" />
+                    </div>
+
+                    <h3>Preço: R$390.000,00</h3>
+                    <img src="https://vignette.wikia.nocookie.net/gtawiki/images/f/ff/Wolfsbane-GTAO-front.png/revision/latest?cb=20161014165611" width="200px" height="100px" />
+                    <input class="imageUrl-wolfsbane" value="https://vignette.wikia.nocookie.net/gtawiki/images/f/ff/Wolfsbane-GTAO-front.png/revision/latest?cb=20161014165611" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('wolfsbane', 390000)" >Comprar</button>
+                </div>
+
+
+                <!--<div class="product">
+                    <h2>Nome: Paradise</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-paradise-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$50.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/vans/main/paradise.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-paradise" value="https://www.gtabase.com/images/gta-5/vehicles/vans/main/paradise.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('paradise', 50000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: FCR1000</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-fcr-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$120.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/fcr-1000.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-fcr" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/fcr-1000.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('fcr', 120000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Diablous Custom</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-diablous2-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$130.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/diabolus-custom.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-diablous2" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/diabolus-custom.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('diablous2', 130000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: CG 150</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-esskey-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$15.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/esskey.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-esskey" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/esskey.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('esskey', 15000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Vortex</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-vortex-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$140.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/vortex.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-vortex" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/vortex.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('vortex', 140000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Moto Enferrujada</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-ratbike-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$10.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/rat-bike.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-ratbike" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/rat-bike.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('ratbike', 10000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: NightBlade</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-nightblade-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$200.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/nightblade.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-nightblade" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/nightblade.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('nightblade', 200000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Manchez</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-manchez-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$80.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/manchez.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-manchez" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/manchez.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('manchez', 80000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: Cliffhanger</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-cliffhanger-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$100.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/cliffhanger.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-cliffhanger" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/cliffhanger.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('cliffhanger', 100000)" >Comprar</button>
+                </div>
+
+                
+                <div class="product" id="motos">
+                    <h2>Nome: Enduro</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-enduro-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$8.000,00</h3>
+                    <img src="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/enduro.jpg" width="200px" height="100px" />
+                    <input class="imageUrl-enduro" value="https://www.gtabase.com/images/gta-5/vehicles/motorcycles/main/enduro.jpg" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('enduro', 8000)" >Comprar</button>
+                </div>
+
+                <div class="product" id="motos">
+                    <h2>Nome: BMW 1200</h2>
+
+                    <div style="margin-left: 5rem; width: 100%;">
+                        <span 
+                            style="font-weight: bold; color: #111111; font-size: 12px;"
+                        >Estoque:</span> 
+                        <input id="stock" class="vehicle-r1250-stock" value="10" />
+                    </div>
+
+                    <h3>Preço: R$390.000,00</h3>
+                    <img src="https://i.imgur.com/hfWG0PY.png" width="200px" height="100px" />
+                    <input class="imageUrl-r1250" value="https://i.imgur.com/hfWG0PY.png" style="display: none;" />
+                    <br>
+                    <button class="buy-button" onclick="buyVehicle('r1250', 390000)" >Comprar</button>
+                </div> -->
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        h1 {
+            color: white;
+        } 
+
+        .sell-vehs-container {
+            margin-top: 1%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+        }
+
+        .product {
+            display: inline-table;
+            background-color: #fafafa;
+            border-radius: 7px;
+            text-align: center;
+
+            max-width: 300px;
+            min-width: 300px;
+
+            max-height: 12rem;
+            min-height: 12rem;
+
+            margin-bottom: 10px;
+
+        }
+
+        .product img {
+            width: 150px;
+            height: 80px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .vehicles-sells {
+            max-height: 30rem;
+            overflow: auto;
+            
+        }
+
+        #stock {
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 12px;
+            color: #111111;
+        }
+
+        .catalog {
+            text-align: center;
+
+            max-height: 40rem;
+            max-width: 17rem;
+
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 7px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .closeButton {
+            border: none;
+            outline: none;
+            background-color: #0074D9;
+            margin: 10px;
+            text-align: center;
+
+            color: white;
+            font-weight: bold;
+        }
+
+        .product h2 {
+            font-size: 10px;
+        }
+
+        .product h3 {
+            font-size: 10px;
+            color: green;
+        }
+
+        .buy-button {
+            background-color: #0074D9;
+            border: none;
+            color: white;
+            font-weight: bold;
+
+            padding: 0.3rem;
+            margin-top: 0.3rem;
+
+            transition: background-color 0.5s;
+        }
+
+        .buy-button:hover {
+            background-color: #7FDBFF;
+            border: none;
+            color: white;
+            font-weight: bold;
+
+            transition: background-color 0.5s;
+        }
+
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+
+    <script>
+        const container = $(".sell-vehs-container");
+        const closeButton = $(".closeButton");
+
+        container.hide();
+
+        window.addEventListener('message', event => {
+            if (event.data.open) {
+                container.show();
+            } else {
+                container.hide();
+            }
+        })
+
+        closeButton.click(() => {
+            container.hide();
+            $.post("http://hpp_sellvehs/closeMenu")
+        })
+
+        function buyVehicle(vehicle, price) {
+            const imageUrl = $(`.imageUrl-${vehicle}`).val();
+            const stock = Number($(`.vehicle-${vehicle}-stock`).val());
+            const trunk = Number($(`.vehicle-${vehicle}-trunk`).val());
+            let data = { vehicle, price, imageUrl, stock, trunk }
+            $.post("http://hpp_sellvehs/buyVehicle", JSON.stringify(data))
+        }
+
+        const carsRouteButton = $(".cars-route-button");
+        carsRouteButton.click(() => {
+            const productList = $(".product");
+            for ( var i = 0; i <= productList.length; i++ ) {
+                if ( productList[i] ) {
+                    if ( productList[i].id !== "carros" ) {
+                        productList[i].setAttribute("style", "display: none;")
+                    } else {
+                        productList[i].setAttribute("style", "display: block;")
+                    }
+                }
+            }  
+        });
+
+        const importsRouteButton = $(".imports-route-button");
+        importsRouteButton.click(() => {
+            const productList = $(".product");
+            for ( var i = 0; i <= productList.length; i++ ) {
+                if ( productList[i] ) {
+                    if ( productList[i].id !== "importados" ) {
+                        productList[i].setAttribute("style", "display: none;")
+                    } else {
+                        productList[i].setAttribute("style", "display: block;")
+                    }
+                }
+            }  
+        });
+
+        const bikeRouteButton = $(".bike-route-button");
+        bikeRouteButton.click(() => {
+            console.log("motoooooooos")
+            const productList = $(".product");
+            for ( var i = 0; i <= productList.length; i++ ) {
+                if ( productList[i] ) {
+                    if ( productList[i].id !== "motos" ) {
+                        productList[i].setAttribute("style", "display: none;")
+                    } else {
+                        productList[i].setAttribute("style", "display: block;")
+                    }
+                }
+            }  
+        })
+
+    </script>
+
+</body>  
+
+</html>  
